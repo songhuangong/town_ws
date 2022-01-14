@@ -1,0 +1,28 @@
+[0.037s] Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/urdf01 -- -j8 -l8
+[0.525s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.526s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.526s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.527s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.527s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.527s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.528s] -- Added test 'lint_cmake' to check CMake code style
+[0.528s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[0.528s] -- Added test 'xmllint' to check XML markup files
+[0.529s] -- Configuring done
+[0.530s] -- Generating done
+[0.530s] -- Build files have been written to: /home/sto-technology/pro/ros2_pro/town_ws/build/urdf01
+[0.534s] Invoked command in '/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/urdf01 -- -j8 -l8
+[0.588s] Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/sto-technology/pro/ros2_pro/town_ws/build/urdf01
+[0.603s] -- Install configuration: "RelWithDebInfo"
+[0.604s] -- Execute custom install script
+[0.604s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/launch/demo01.launch
+[0.605s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/launch/demo01.launch.py
+[0.606s] CMake Error at ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:100 (message):
+[0.606s]   ament_cmake_symlink_install_directory() can't find
+[0.606s]   '/home/sto-technology/pro/ros2_pro/town_ws/src/urdf01/maps'
+[0.606s] Call Stack (most recent call first):
+[0.606s]   ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:314 (ament_cmake_symlink_install_directory)
+[0.606s]   cmake_install.cmake:41 (include)
+[0.606s] 
+[0.606s] 
+[0.607s] Invoked command in '/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01' returned '1': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/sto-technology/pro/ros2_pro/town_ws/build/urdf01

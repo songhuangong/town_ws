@@ -1,0 +1,15 @@
+source;share/village_li/hook/cmake_prefix_path.ps1
+source;share/village_li/hook/cmake_prefix_path.dsv
+source;share/village_li/hook/cmake_prefix_path.sh
+source;share/village_li/hook/ld_library_path_lib.ps1
+source;share/village_li/hook/ld_library_path_lib.dsv
+source;share/village_li/hook/ld_library_path_lib.sh
+source;share/village_li/hook/pythonpath.ps1
+source;share/village_li/hook/pythonpath.dsv
+source;share/village_li/hook/pythonpath.sh
+source;share/village_li/hook/ament_prefix_path.ps1
+source;share/village_li/hook/ament_prefix_path.dsv
+source;share/village_li/hook/ament_prefix_path.sh
+source;../build/village_li/share/village_li/hook/pythonpath_develop.ps1
+source;../build/village_li/share/village_li/hook/pythonpath_develop.dsv
+source;../build/village_li/share/village_li/hook/pythonpath_develop.sh

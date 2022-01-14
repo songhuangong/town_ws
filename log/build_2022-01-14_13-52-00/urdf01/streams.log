@@ -1,0 +1,24 @@
+[0.267s] Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/urdf01 -- -j8 -l8
+[0.839s] Invoked command in '/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/urdf01 -- -j8 -l8
+[0.943s] Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/sto-technology/pro/ros2_pro/town_ws/build/urdf01
+[0.957s] -- Install configuration: "RelWithDebInfo"
+[0.957s] -- Execute custom install script
+[0.958s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/launch/demo01.launch
+[0.958s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/launch/demo01.launch.py
+[0.958s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/urdf/urdf/demo01.urdf
+[0.959s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/ament_index/resource_index/package_run_dependencies/urdf01
+[0.968s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/ament_index/resource_index/parent_prefix_path/urdf01
+[0.968s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/environment/ament_prefix_path.sh
+[0.968s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/environment/ament_prefix_path.dsv
+[0.968s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/environment/path.sh
+[0.968s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/environment/path.dsv
+[0.968s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/local_setup.bash
+[0.970s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/local_setup.sh
+[0.973s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/local_setup.zsh
+[0.974s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/local_setup.dsv
+[0.974s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/package.dsv
+[1.004s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/ament_index/resource_index/packages/urdf01
+[1.004s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/cmake/urdf01Config.cmake
+[1.005s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/cmake/urdf01Config-version.cmake
+[1.005s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/package.xml
+[1.018s] Invoked command in '/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/sto-technology/pro/ros2_pro/town_ws/build/urdf01

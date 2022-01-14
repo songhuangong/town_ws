@@ -1,0 +1,19 @@
+[1.314s] Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_li': PYTHONPATH=/home/sto-technology/pro/ros2_pro/town_ws/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/sto-technology/pro/ros2_pro/town_ws/install --editable --build-directory /home/sto-technology/pro/ros2_pro/town_ws/build/village_li/build --no-deps install_data --install-dir /home/sto-technology/pro/ros2_pro/town_ws/install
+[1.533s] running develop
+[1.580s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:368: UserWarning: Unbuilt egg for mycar 0.0.0 (/home/sto-technology/pro/ros2_pro/town_ws/build/mycar)
+[1.580s]   self.local_index = Environment(self.shadow_path + sys.path)
+[1.661s] running egg_info
+[1.662s] writing village_li.egg-info/PKG-INFO
+[1.662s] writing dependency_links to village_li.egg-info/dependency_links.txt
+[1.662s] writing entry points to village_li.egg-info/entry_points.txt
+[1.662s] writing requirements to village_li.egg-info/requires.txt
+[1.662s] writing top-level names to village_li.egg-info/top_level.txt
+[1.706s] reading manifest file 'village_li.egg-info/SOURCES.txt'
+[1.706s] writing manifest file 'village_li.egg-info/SOURCES.txt'
+[1.734s] running build_ext
+[1.734s] Creating /home/sto-technology/pro/ros2_pro/town_ws/install/lib/python3.8/site-packages/village-li.egg-link (link to .)
+[1.735s] Installing li4_node script to /home/sto-technology/pro/ros2_pro/town_ws/install/lib/village_li
+[1.735s] 
+[1.736s] Installed /home/sto-technology/pro/ros2_pro/town_ws/build/village_li
+[1.736s] running install_data
+[1.787s] Invoked command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_li' returned '0': PYTHONPATH=/home/sto-technology/pro/ros2_pro/town_ws/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/sto-technology/pro/ros2_pro/town_ws/install --editable --build-directory /home/sto-technology/pro/ros2_pro/town_ws/build/village_li/build --no-deps install_data --install-dir /home/sto-technology/pro/ros2_pro/town_ws/install

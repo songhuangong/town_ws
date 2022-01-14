@@ -1,0 +1,72 @@
+[0.000000] (-) TimerEvent: {}
+[0.000706] (-) JobUnselected: {'identifier': 'vilige_zhang'}
+[0.000922] (-) JobUnselected: {'identifier': 'village_li'}
+[0.000983] (-) JobUnselected: {'identifier': 'village_wang'}
+[0.001038] (village_interface) JobQueued: {'identifier': 'village_interface', 'dependencies': OrderedDict()}
+[0.001071] (village_interface) JobStarted: {'identifier': 'village_interface'}
+[0.011806] (village_interface) JobProgress: {'identifier': 'village_interface', 'progress': 'cmake'}
+[0.012593] (village_interface) Command: {'cmd': ['/usr/bin/cmake', '/home/sto-technology/pro/ros2_pro/town_ws/village_interface', '-DCMAKE_INSTALL_PREFIX=/home/sto-technology/pro/ros2_pro/town_ws/install'], 'cwd': '/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'sto-technology'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1663'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/sto-technology'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/sto-technology/pro/ros2_pro'), ('TERM_PROGRAM_VERSION', '1.55.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL', 'true'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1470'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2026'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'sto-technology'), ('JOURNAL_STREAM', '9:46298'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'sto-technology'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/opt/ros/foxy/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/sto-technology/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sto-technology/.dotnet/tools'), ('SESSION_MANAGER', 'local/stotechnology:@/tmp/.ICE-unix/1716,unix/stotechnology:/tmp/.ICE-unix/1716'), ('INVOCATION_ID', '31dd9d51f5744a40a0de489110b39e04'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-3d9748271f.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:6a7f68ef-b619-4d9d-bcfe-8086289bdcaa'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.028247] (village_interface) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.046686] (village_interface) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.046845] (village_interface) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.099709] (-) TimerEvent: {}
+[0.192304] (village_interface) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.198498] (village_interface) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.4 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[0.199776] (-) TimerEvent: {}
+[0.215509] (village_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.218472] (village_interface) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.299902] (-) TimerEvent: {}
+[0.300602] (village_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.400022] (-) TimerEvent: {}
+[0.445967] (village_interface) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[0.453802] (village_interface) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[0.500142] (-) TimerEvent: {}
+[0.520564] (village_interface) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[0.600258] (-) TimerEvent: {}
+[0.665700] (village_interface) StderrLine: {'line': b'CMake Error at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):\n'}
+[0.665884] (village_interface) StderrLine: {'line': b'  execute_process(/usr/bin/python3 -m rosidl_adapter --package-name\n'}
+[0.665962] (village_interface) StderrLine: {'line': b'  village_interface --arguments-file\n'}
+[0.666037] (village_interface) StderrLine: {'line': b'  /home/sto-technology/pro/ros2_pro/town_ws/build/village_interface/rosidl_adapter__arguments__village_interface.json\n'}
+[0.666095] (village_interface) StderrLine: {'line': b'  --output-dir\n'}
+[0.666166] (village_interface) StderrLine: {'line': b'  /home/sto-technology/pro/ros2_pro/town_ws/build/village_interface/rosidl_adapter/village_interface\n'}
+[0.666224] (village_interface) StderrLine: {'line': b'  --output-file\n'}
+[0.666281] (village_interface) StderrLine: {'line': b'  /home/sto-technology/pro/ros2_pro/town_ws/build/village_interface/rosidl_adapter/village_interface.idls)\n'}
+[0.666335] (village_interface) StderrLine: {'line': b'  returned error code 1:\n'}
+[0.666387] (village_interface) StderrLine: {'line': b'\n'}
+[0.666442] (village_interface) StderrLine: {'line': b"  Error processing 'sensor_msgs/msg/Image image' of\n"}
+[0.666495] (village_interface) StderrLine: {'line': b"  'village_interface/Novel': 'sensor_msgs/msg/Image'\n"}
+[0.666548] (village_interface) StderrLine: {'line': b'\n'}
+[0.666600] (village_interface) StderrLine: {'line': b'  Traceback (most recent call last):\n'}
+[0.666652] (village_interface) StderrLine: {'line': b'\n'}
+[0.666704] (village_interface) StderrLine: {'line': b'    File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main\n'}
+[0.666756] (village_interface) StderrLine: {'line': b'      return _run_code(code, main_globals, None,\n'}
+[0.666807] (village_interface) StderrLine: {'line': b'    File "/usr/lib/python3.8/runpy.py", line 87, in _run_code\n'}
+[0.666859] (village_interface) StderrLine: {'line': b'      exec(code, run_globals)\n'}
+[0.666914] (village_interface) StderrLine: {'line': b'    File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>\n'}
+[0.666966] (village_interface) StderrLine: {'line': b'      sys.exit(main())\n'}
+[0.667018] (village_interface) StderrLine: {'line': b'    File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main\n'}
+[0.667069] (village_interface) StderrLine: {'line': b'      abs_idl_file = convert_to_idl(\n'}
+[0.667166] (village_interface) StderrLine: {'line': b'    File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl\n'}
+[0.667222] (village_interface) StderrLine: {'line': b'      return convert_msg_to_idl(\n'}
+[0.667274] (village_interface) StderrLine: {'line': b'    File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl\n'}
+[0.667328] (village_interface) StderrLine: {'line': b'      msg = parse_message_string(package_name, input_file.stem, content)\n'}
+[0.667382] (village_interface) StderrLine: {'line': b'    File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 516, in parse_message_string\n'}
+[0.667434] (village_interface) StderrLine: {'line': b'      Type(type_string, context_package_name=pkg_name),\n'}
+[0.667485] (village_interface) StderrLine: {'line': b'    File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 276, in __init__\n'}
+[0.667536] (village_interface) StderrLine: {'line': b'      super(Type, self).__init__(\n'}
+[0.667587] (village_interface) StderrLine: {'line': b'    File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 189, in __init__\n'}
+[0.667638] (village_interface) StderrLine: {'line': b'      raise InvalidResourceName(type_string)\n'}
+[0.667690] (village_interface) StderrLine: {'line': b'\n'}
+[0.667742] (village_interface) StderrLine: {'line': b'  rosidl_adapter.parser.InvalidResourceName: sensor_msgs/msg/Image\n'}
+[0.667794] (village_interface) StderrLine: {'line': b'\n'}
+[0.667848] (village_interface) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.667899] (village_interface) StderrLine: {'line': b'  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)\n'}
+[0.667950] (village_interface) StderrLine: {'line': b'  CMakeLists.txt:51 (rosidl_generate_interfaces)\n'}
+[0.668006] (village_interface) StderrLine: {'line': b'\n'}
+[0.668057] (village_interface) StderrLine: {'line': b'\n'}
+[0.668108] (village_interface) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.668166] (village_interface) StdoutLine: {'line': b'See also "/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface/CMakeFiles/CMakeOutput.log".\n'}
+[0.671503] (village_interface) CommandEnded: {'returncode': 1}
+[0.693560] (village_interface) JobEnded: {'identifier': 'village_interface', 'rc': 1}
+[0.700385] (-) TimerEvent: {}
+[0.704507] (-) EventReactorShutdown: {}

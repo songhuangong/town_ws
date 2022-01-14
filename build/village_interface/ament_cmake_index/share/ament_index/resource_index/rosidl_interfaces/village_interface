@@ -1,0 +1,10 @@
+msg/Novel.idl
+msg/Novel.msg
+srv/Buybooks.idl
+srv/Buybooks.srv
+srv/Buybooks_Request.msg
+srv/Buybooks_Response.msg
+srv/Money.idl
+srv/Money.srv
+srv/Money_Request.msg
+srv/Money_Response.msg

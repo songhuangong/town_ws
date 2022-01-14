@@ -1,0 +1,17 @@
+[0.939s] Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/vilige_zhang': PYTHONPATH=/home/sto-technology/pro/ros2_pro/town_ws/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/sto-technology/pro/ros2_pro/town_ws/install --editable --build-directory /home/sto-technology/pro/ros2_pro/town_ws/build/vilige_zhang/build --no-deps install_data --install-dir /home/sto-technology/pro/ros2_pro/town_ws/install
+[1.131s] running develop
+[1.245s] running egg_info
+[1.246s] writing vilige_zhang.egg-info/PKG-INFO
+[1.246s] writing dependency_links to vilige_zhang.egg-info/dependency_links.txt
+[1.246s] writing entry points to vilige_zhang.egg-info/entry_points.txt
+[1.246s] writing requirements to vilige_zhang.egg-info/requires.txt
+[1.246s] writing top-level names to vilige_zhang.egg-info/top_level.txt
+[1.274s] reading manifest file 'vilige_zhang.egg-info/SOURCES.txt'
+[1.275s] writing manifest file 'vilige_zhang.egg-info/SOURCES.txt'
+[1.304s] running build_ext
+[1.304s] Creating /home/sto-technology/pro/ros2_pro/town_ws/install/lib/python3.8/site-packages/vilige-zhang.egg-link (link to .)
+[1.305s] Installing zhang3 script to /home/sto-technology/pro/ros2_pro/town_ws/install/lib/vilige_zhang
+[1.305s] 
+[1.305s] Installed /home/sto-technology/pro/ros2_pro/town_ws/build/vilige_zhang
+[1.305s] running install_data
+[1.349s] Invoked command in '/home/sto-technology/pro/ros2_pro/town_ws/build/vilige_zhang' returned '0': PYTHONPATH=/home/sto-technology/pro/ros2_pro/town_ws/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/sto-technology/pro/ros2_pro/town_ws/install --editable --build-directory /home/sto-technology/pro/ros2_pro/town_ws/build/vilige_zhang/build --no-deps install_data --install-dir /home/sto-technology/pro/ros2_pro/town_ws/install

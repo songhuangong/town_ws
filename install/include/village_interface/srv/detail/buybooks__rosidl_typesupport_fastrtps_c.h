@@ -1,0 +1,1 @@
+/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface/rosidl_typesupport_fastrtps_c/village_interface/srv/detail/buybooks__rosidl_typesupport_fastrtps_c.h

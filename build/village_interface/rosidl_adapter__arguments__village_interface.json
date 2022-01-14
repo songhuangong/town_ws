@@ -1,0 +1,8 @@
+{
+  "package_name": "village_interface",
+  "non_idl_tuples": [
+    "/home/sto-technology/pro/ros2_pro/town_ws/village_interface:msg/Novel.msg",
+    "/home/sto-technology/pro/ros2_pro/town_ws/village_interface:srv/Money.srv",
+    "/home/sto-technology/pro/ros2_pro/town_ws/village_interface:srv/Buybooks.srv"
+  ]
+}

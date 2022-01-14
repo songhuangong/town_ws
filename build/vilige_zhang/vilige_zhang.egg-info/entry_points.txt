@@ -1,0 +1,3 @@
+[console_scripts]
+zhang3 = vilige_zhang.zhang3:main
+

@@ -1,0 +1,216 @@
+[0.223s] Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/village_interface -- -j8 -l8
+[0.425s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.426s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.426s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.427s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.432s] -- Found sensor_msgs: 2.0.4 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[0.454s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.459s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.599s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.788s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.796s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.881s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[1.009s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[1.276s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.441s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.465s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[1.465s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[1.483s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.484s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[1.484s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[1.560s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.562s] -- Added test 'lint_cmake' to check CMake code style
+[1.564s] -- Added test 'xmllint' to check XML markup files
+[1.572s] -- Configuring done
+[1.645s] -- Generating done
+[1.648s] -- Build files have been written to: /home/sto-technology/pro/ros2_pro/town_ws/build/village_interface
+[1.669s] [35m[1mScanning dependencies of target village_interface__cpp[0m
+[1.670s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.678s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.997s] [  4%] Built target village_interface__cpp
+[1.998s] [35m[1mScanning dependencies of target village_interface__rosidl_generator_c[0m
+[2.011s] [  8%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.011s] [  8%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.015s] [ 10%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.018s] [ 12%] [32mBuilding C object CMakeFiles/village_interface__rosidl_generator_c.dir/rosidl_generator_c/village_interface/srv/detail/buybooks__functions.c.o[0m
+[2.019s] [ 17%] [32mBuilding C object CMakeFiles/village_interface__rosidl_generator_c.dir/rosidl_generator_c/village_interface/srv/detail/money__functions.c.o[0m
+[2.019s] [ 17%] [32mBuilding C object CMakeFiles/village_interface__rosidl_generator_c.dir/rosidl_generator_c/village_interface/msg/detail/novel__functions.c.o[0m
+[2.128s] [ 19%] [32m[1mLinking C shared library libvillage_interface__rosidl_generator_c.so[0m
+[2.176s] [ 19%] Built target village_interface__rosidl_generator_c
+[2.189s] [ 21%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.189s] [ 23%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.372s] [35m[1mScanning dependencies of target village_interface__rosidl_typesupport_fastrtps_cpp[0m
+[2.393s] [ 25%] [32mBuilding CXX object CMakeFiles/village_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/village_interface/msg/detail/dds_fastrtps/novel__type_support.cpp.o[0m
+[2.404s] [ 27%] [32mBuilding CXX object CMakeFiles/village_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/village_interface/srv/detail/dds_fastrtps/money__type_support.cpp.o[0m
+[2.407s] [ 29%] [32mBuilding CXX object CMakeFiles/village_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/village_interface/srv/detail/dds_fastrtps/buybooks__type_support.cpp.o[0m
+[2.445s] [35m[1mScanning dependencies of target village_interface__rosidl_typesupport_cpp[0m
+[2.482s] [ 31%] [32mBuilding CXX object CMakeFiles/village_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/village_interface/msg/novel__type_support.cpp.o[0m
+[2.520s] [ 34%] [32mBuilding CXX object CMakeFiles/village_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/village_interface/srv/money__type_support.cpp.o[0m
+[2.535s] [35m[1mScanning dependencies of target village_interface__rosidl_typesupport_introspection_cpp[0m
+[2.583s] [ 36%] [32mBuilding CXX object CMakeFiles/village_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/village_interface/msg/detail/novel__type_support.cpp.o[0m
+[2.657s] [35m[1mScanning dependencies of target village_interface__rosidl_typesupport_c[0m
+[2.691s] [35m[1mScanning dependencies of target village_interface__rosidl_typesupport_introspection_c[0m
+[2.711s] [ 38%] [32mBuilding CXX object CMakeFiles/village_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/village_interface/msg/novel__type_support.cpp.o[0m
+[2.778s] [ 40%] [32mBuilding C object CMakeFiles/village_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/village_interface/msg/detail/novel__type_support.c.o[0m
+[2.824s] [ 42%] [32mBuilding CXX object CMakeFiles/village_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/village_interface/srv/money__type_support.cpp.o[0m
+[2.905s] [ 44%] [32mBuilding C object CMakeFiles/village_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/village_interface/srv/detail/money__type_support.c.o[0m
+[2.921s] [ 46%] [32mBuilding CXX object CMakeFiles/village_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/village_interface/srv/buybooks__type_support.cpp.o[0m
+[2.991s] [ 48%] [32m[1mLinking CXX shared library libvillage_interface__rosidl_typesupport_c.so[0m
+[3.002s] [ 51%] [32mBuilding CXX object CMakeFiles/village_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/village_interface/srv/detail/money__type_support.cpp.o[0m
+[3.022s] [ 53%] [32mBuilding CXX object CMakeFiles/village_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/village_interface/srv/buybooks__type_support.cpp.o[0m
+[3.051s] [ 55%] [32mBuilding C object CMakeFiles/village_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/village_interface/srv/detail/buybooks__type_support.c.o[0m
+[3.104s] [ 55%] Built target village_interface__rosidl_typesupport_c
+[3.137s] [ 57%] [32mBuilding CXX object CMakeFiles/village_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/village_interface/srv/detail/buybooks__type_support.cpp.o[0m
+[3.164s] [ 59%] [32m[1mLinking C shared library libvillage_interface__rosidl_typesupport_introspection_c.so[0m
+[3.239s] [ 59%] Built target village_interface__rosidl_typesupport_introspection_c
+[3.296s] [ 61%] [32m[1mLinking CXX shared library libvillage_interface__rosidl_typesupport_fastrtps_cpp.so[0m
+[3.444s] [ 63%] [32m[1mLinking CXX shared library libvillage_interface__rosidl_typesupport_cpp.so[0m
+[3.446s] [ 63%] Built target village_interface__rosidl_typesupport_fastrtps_cpp
+[3.460s] [ 65%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[3.489s] [ 65%] Built target village_interface__rosidl_typesupport_cpp
+[3.584s] [ 68%] [32m[1mLinking CXX shared library libvillage_interface__rosidl_typesupport_introspection_cpp.so[0m
+[3.655s] [ 68%] Built target village_interface__rosidl_typesupport_introspection_cpp
+[3.780s] [35m[1mScanning dependencies of target village_interface__rosidl_typesupport_fastrtps_c[0m
+[3.801s] [ 74%] [32mBuilding CXX object CMakeFiles/village_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/village_interface/srv/detail/buybooks__type_support_c.cpp.o[0m
+[3.801s] [ 74%] [32mBuilding CXX object CMakeFiles/village_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/village_interface/msg/detail/novel__type_support_c.cpp.o[0m
+[3.801s] [ 74%] [32mBuilding CXX object CMakeFiles/village_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/village_interface/srv/detail/money__type_support_c.cpp.o[0m
+[4.240s] [ 76%] [32m[1mLinking CXX shared library libvillage_interface__rosidl_typesupport_fastrtps_c.so[0m
+[4.323s] [ 76%] Built target village_interface__rosidl_typesupport_fastrtps_c
+[4.344s] [ 76%] Built target village_interface
+[4.353s] [35m[1mScanning dependencies of target village_interface__py[0m
+[4.362s] [ 78%] [34m[1mGenerating Python code for ROS interfaces[0m
+[4.948s] [ 78%] Built target village_interface__py
+[4.960s] [35m[1mScanning dependencies of target village_interface__python[0m
+[4.978s] [ 80%] [32mBuilding C object CMakeFiles/village_interface__python.dir/rosidl_generator_py/village_interface/msg/_novel_s.c.o[0m
+[4.980s] [ 82%] [32mBuilding C object CMakeFiles/village_interface__python.dir/rosidl_generator_py/village_interface/srv/_buybooks_s.c.o[0m
+[4.980s] [ 85%] [32mBuilding C object CMakeFiles/village_interface__python.dir/rosidl_generator_py/village_interface/srv/_money_s.c.o[0m
+[5.136s] [ 87%] [32m[1mLinking C shared library rosidl_generator_py/village_interface/libvillage_interface__python.so[0m
+[5.180s] [ 87%] Built target village_interface__python
+[5.190s] [35m[1mScanning dependencies of target village_interface__rosidl_typesupport_introspection_c__pyext[0m
+[5.191s] [35m[1mScanning dependencies of target village_interface__rosidl_typesupport_c__pyext[0m
+[5.201s] [35m[1mScanning dependencies of target village_interface__rosidl_typesupport_fastrtps_c__pyext[0m
+[5.207s] [ 89%] [32mBuilding C object CMakeFiles/village_interface__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/village_interface/_village_interface_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[5.209s] [ 91%] [32mBuilding C object CMakeFiles/village_interface__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/village_interface/_village_interface_s.ep.rosidl_typesupport_c.c.o[0m
+[5.223s] [ 93%] [32mBuilding C object CMakeFiles/village_interface__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/village_interface/_village_interface_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[5.362s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/village_interface/village_interface_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[5.409s] [ 95%] Built target village_interface__rosidl_typesupport_c__pyext
+[5.439s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/village_interface/village_interface_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[5.451s] [100%] [32m[1mLinking CXX shared library rosidl_generator_py/village_interface/village_interface_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[5.480s] [100%] Built target village_interface__rosidl_typesupport_introspection_c__pyext
+[5.533s] [100%] Built target village_interface__rosidl_typesupport_fastrtps_c__pyext
+[5.543s] Invoked command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/village_interface -- -j8 -l8
+[5.607s] Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/sto-technology/pro/ros2_pro/town_ws/build/village_interface
+[5.616s] -- Install configuration: "RelWithDebInfo"
+[5.616s] -- Execute custom install script
+[5.617s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/ament_index/resource_index/rosidl_interfaces/village_interface
+[5.618s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/msg/detail/novel__functions.h
+[5.618s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/msg/detail/novel__struct.h
+[5.618s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/msg/detail/novel__type_support.h
+[5.619s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/msg/novel.h
+[5.619s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/msg/rosidl_generator_c__visibility_control.h
+[5.619s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/buybooks.h
+[5.627s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/detail/buybooks__functions.h
+[5.636s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/detail/buybooks__struct.h
+[5.643s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/detail/buybooks__type_support.h
+[5.654s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/detail/money__functions.h
+[5.654s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/detail/money__struct.h
+[5.654s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/detail/money__type_support.h
+[5.654s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/money.h
+[5.655s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/environment/library_path.sh
+[5.655s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/environment/library_path.dsv
+[5.656s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/msg/detail/novel__rosidl_typesupport_fastrtps_c.h
+[5.656s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[5.656s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/detail/buybooks__rosidl_typesupport_fastrtps_c.h
+[5.663s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/detail/money__rosidl_typesupport_fastrtps_c.h
+[5.664s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/lib/libvillage_interface__rosidl_typesupport_fastrtps_c.so
+[5.665s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/msg/detail/novel__rosidl_typesupport_fastrtps_cpp.hpp
+[5.665s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[5.665s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/detail/buybooks__rosidl_typesupport_fastrtps_cpp.hpp
+[5.673s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/detail/money__rosidl_typesupport_fastrtps_cpp.hpp
+[5.674s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/lib/libvillage_interface__rosidl_typesupport_fastrtps_cpp.so
+[5.674s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/msg/detail/novel__rosidl_typesupport_introspection_c.h
+[5.675s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[5.675s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/detail/buybooks__rosidl_typesupport_introspection_c.h
+[5.683s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/detail/money__rosidl_typesupport_introspection_c.h
+[5.684s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/msg/detail/novel__builder.hpp
+[5.684s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/msg/detail/novel__struct.hpp
+[5.684s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/msg/detail/novel__traits.hpp
+[5.685s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/msg/novel.hpp
+[5.685s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/buybooks.hpp
+[5.693s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/detail/buybooks__builder.hpp
+[5.702s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/detail/buybooks__struct.hpp
+[5.709s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/detail/buybooks__traits.hpp
+[5.718s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/detail/money__builder.hpp
+[5.719s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/detail/money__struct.hpp
+[5.719s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/detail/money__traits.hpp
+[5.719s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/money.hpp
+[5.720s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/msg/detail/novel__rosidl_typesupport_introspection_cpp.hpp
+[5.720s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/detail/buybooks__rosidl_typesupport_introspection_cpp.hpp
+[5.728s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/include/village_interface/srv/detail/money__rosidl_typesupport_introspection_cpp.hpp
+[5.728s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/environment/pythonpath.sh
+[5.728s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/environment/pythonpath.dsv
+[5.729s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/lib/python3.8/site-packages/village_interface/__init__.py
+[5.730s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/lib/python3.8/site-packages/village_interface/msg/__init__.py
+[5.730s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/lib/python3.8/site-packages/village_interface/msg/_novel.py
+[5.730s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/lib/python3.8/site-packages/village_interface/srv/__init__.py
+[5.731s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/lib/python3.8/site-packages/village_interface/srv/_buybooks.py
+[5.739s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/lib/python3.8/site-packages/village_interface/srv/_money.py
+[5.740s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/lib/python3.8/site-packages/village_interface/village_interface_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[5.740s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/lib/python3.8/site-packages/village_interface/village_interface_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[5.741s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/lib/python3.8/site-packages/village_interface/village_interface_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[5.741s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/lib/libvillage_interface__python.so
+[5.742s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/msg/Novel.idl
+[5.742s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/srv/Money.idl
+[5.742s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/srv/Buybooks.idl
+[5.751s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/msg/Novel.msg
+[5.751s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/srv/Money.srv
+[5.751s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/srv/Money_Request.msg
+[5.752s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/srv/Money_Response.msg
+[5.752s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/srv/Buybooks.srv
+[5.759s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/srv/Buybooks_Request.msg
+[5.767s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/srv/Buybooks_Response.msg
+[5.774s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/ament_index/resource_index/package_run_dependencies/village_interface
+[5.774s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/ament_index/resource_index/parent_prefix_path/village_interface
+[5.775s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/environment/ament_prefix_path.sh
+[5.775s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/environment/ament_prefix_path.dsv
+[5.775s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/environment/path.sh
+[5.776s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/environment/path.dsv
+[5.776s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/local_setup.bash
+[5.776s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/local_setup.sh
+[5.776s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/local_setup.zsh
+[5.777s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/local_setup.dsv
+[5.777s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/package.dsv
+[5.788s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/ament_index/resource_index/packages/village_interface
+[5.788s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/cmake/rosidl_cmake-extras.cmake
+[5.788s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.788s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/cmake/ament_cmake_export_libraries-extras.cmake
+[5.788s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/cmake/ament_cmake_export_targets-extras.cmake
+[5.789s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.789s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[5.789s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[5.789s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/cmake/village_interfaceConfig.cmake
+[5.790s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/cmake/village_interfaceConfig-version.cmake
+[5.790s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/package.xml
+[5.790s] -- Installing: /home/sto-technology/pro/ros2_pro/town_ws/install/lib/libvillage_interface__rosidl_generator_c.so
+[5.791s] -- Set runtime path of "/home/sto-technology/pro/ros2_pro/town_ws/install/lib/libvillage_interface__rosidl_generator_c.so" to ""
+[5.791s] -- Installing: /home/sto-technology/pro/ros2_pro/town_ws/install/lib/libvillage_interface__rosidl_typesupport_introspection_c.so
+[5.791s] -- Set runtime path of "/home/sto-technology/pro/ros2_pro/town_ws/install/lib/libvillage_interface__rosidl_typesupport_introspection_c.so" to ""
+[5.791s] -- Installing: /home/sto-technology/pro/ros2_pro/town_ws/install/lib/libvillage_interface__rosidl_typesupport_c.so
+[5.792s] -- Set runtime path of "/home/sto-technology/pro/ros2_pro/town_ws/install/lib/libvillage_interface__rosidl_typesupport_c.so" to ""
+[5.792s] -- Installing: /home/sto-technology/pro/ros2_pro/town_ws/install/lib/libvillage_interface__rosidl_typesupport_introspection_cpp.so
+[5.792s] -- Set runtime path of "/home/sto-technology/pro/ros2_pro/town_ws/install/lib/libvillage_interface__rosidl_typesupport_introspection_cpp.so" to ""
+[5.793s] -- Installing: /home/sto-technology/pro/ros2_pro/town_ws/install/lib/libvillage_interface__rosidl_typesupport_cpp.so
+[5.793s] -- Set runtime path of "/home/sto-technology/pro/ros2_pro/town_ws/install/lib/libvillage_interface__rosidl_typesupport_cpp.so" to ""
+[5.819s] Compiling '/home/sto-technology/pro/ros2_pro/town_ws/install/lib/python3.8/site-packages/village_interface/__init__.py'...
+[5.822s] -- Up-to-date: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/cmake/village_interface__rosidl_generator_cExport.cmake
+[5.823s] -- Installing: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/cmake/village_interface__rosidl_generator_cExport-relwithdebinfo.cmake
+[5.823s] -- Up-to-date: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/cmake/village_interface__rosidl_typesupport_introspection_cExport.cmake
+[5.823s] -- Installing: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/cmake/village_interface__rosidl_typesupport_introspection_cExport-relwithdebinfo.cmake
+[5.823s] -- Up-to-date: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/cmake/village_interface__rosidl_typesupport_cExport.cmake
+[5.823s] -- Installing: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/cmake/village_interface__rosidl_typesupport_cExport-relwithdebinfo.cmake
+[5.823s] -- Up-to-date: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/cmake/village_interface__rosidl_generator_cppExport.cmake
+[5.823s] -- Up-to-date: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/cmake/village_interface__rosidl_typesupport_introspection_cppExport.cmake
+[5.823s] -- Installing: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/cmake/village_interface__rosidl_typesupport_introspection_cppExport-relwithdebinfo.cmake
+[5.823s] -- Up-to-date: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/cmake/village_interface__rosidl_typesupport_cppExport.cmake
+[5.824s] -- Installing: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_interface/cmake/village_interface__rosidl_typesupport_cppExport-relwithdebinfo.cmake
+[5.826s] Invoked command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/sto-technology/pro/ros2_pro/town_ws/build/village_interface

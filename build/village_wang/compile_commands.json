@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/sto-technology/pro/ros2_pro/town_ws/build/village_wang",
+  "command": "/usr/bin/c++  -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DRCUTILS_ENABLE_FAULT_INJECTION -DSPDLOG_COMPILED_LIB -isystem /opt/ros/foxy/include  -O2 -g -DNDEBUG   -Wall -Wextra -Wpedantic -std=gnu++14 -o CMakeFiles/wang2_node.dir/src/wang2.cpp.o -c /home/sto-technology/pro/ros2_pro/town_ws/src/village_wang/src/wang2.cpp",
+  "file": "/home/sto-technology/pro/ros2_pro/town_ws/src/village_wang/src/wang2.cpp"
+}
+]

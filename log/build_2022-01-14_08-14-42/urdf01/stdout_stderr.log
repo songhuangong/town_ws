@@ -1,0 +1,20 @@
+-- Install configuration: "RelWithDebInfo"
+-- Execute custom install script
+-- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/launch/demo01.launch
+-- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/launch/demo01.launch.py
+-- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/urdf/urdf/demo01.urdf
+-- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/ament_index/resource_index/package_run_dependencies/urdf01
+-- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/ament_index/resource_index/parent_prefix_path/urdf01
+-- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/environment/path.sh
+-- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/environment/path.dsv
+-- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/local_setup.bash
+-- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/local_setup.sh
+-- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/local_setup.zsh
+-- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/local_setup.dsv
+-- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/package.dsv
+-- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/ament_index/resource_index/packages/urdf01
+-- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/cmake/urdf01Config.cmake
+-- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/cmake/urdf01Config-version.cmake
+-- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/urdf01/package.xml

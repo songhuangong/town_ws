@@ -1,0 +1,19 @@
+running develop
+running egg_info
+creating vilige_zhang.egg-info
+writing vilige_zhang.egg-info/PKG-INFO
+writing dependency_links to vilige_zhang.egg-info/dependency_links.txt
+writing entry points to vilige_zhang.egg-info/entry_points.txt
+writing requirements to vilige_zhang.egg-info/requires.txt
+writing top-level names to vilige_zhang.egg-info/top_level.txt
+writing manifest file 'vilige_zhang.egg-info/SOURCES.txt'
+reading manifest file 'vilige_zhang.egg-info/SOURCES.txt'
+writing manifest file 'vilige_zhang.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/sto-technology/pro/ros2_pro/town_ws/install/lib/python3.8/site-packages/vilige-zhang.egg-link (link to .)
+Installing zhang3 script to /home/sto-technology/pro/ros2_pro/town_ws/install/lib/vilige_zhang
+
+Installed /home/sto-technology/pro/ros2_pro/town_ws/build/vilige_zhang
+running install_data
+copying resource/vilige_zhang -> /home/sto-technology/pro/ros2_pro/town_ws/install/share/ament_index/resource_index/packages
+copying package.xml -> /home/sto-technology/pro/ros2_pro/town_ws/install/share/vilige_zhang

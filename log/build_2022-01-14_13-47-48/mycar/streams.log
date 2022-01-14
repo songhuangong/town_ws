@@ -1,0 +1,17 @@
+[1.414s] Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/mycar': PYTHONPATH=/home/sto-technology/pro/ros2_pro/town_ws/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/sto-technology/pro/ros2_pro/town_ws/install --editable --build-directory /home/sto-technology/pro/ros2_pro/town_ws/build/mycar/build --no-deps install_data --install-dir /home/sto-technology/pro/ros2_pro/town_ws/install
+[1.654s] running develop
+[1.797s] running egg_info
+[1.798s] writing mycar.egg-info/PKG-INFO
+[1.798s] writing dependency_links to mycar.egg-info/dependency_links.txt
+[1.798s] writing entry points to mycar.egg-info/entry_points.txt
+[1.798s] writing requirements to mycar.egg-info/requires.txt
+[1.798s] writing top-level names to mycar.egg-info/top_level.txt
+[1.831s] reading manifest file 'mycar.egg-info/SOURCES.txt'
+[1.831s] writing manifest file 'mycar.egg-info/SOURCES.txt'
+[1.884s] running build_ext
+[1.884s] Creating /home/sto-technology/pro/ros2_pro/town_ws/install/lib/python3.8/site-packages/mycar.egg-link (link to .)
+[1.885s] 
+[1.885s] Installed /home/sto-technology/pro/ros2_pro/town_ws/build/mycar
+[1.885s] running install_data
+[1.885s] copying launch/start_mycar.launch.py -> /home/sto-technology/pro/ros2_pro/town_ws/install/share/mycar/launch
+[1.904s] Invoked command in '/home/sto-technology/pro/ros2_pro/town_ws/build/mycar' returned '0': PYTHONPATH=/home/sto-technology/pro/ros2_pro/town_ws/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/sto-technology/pro/ros2_pro/town_ws/install --editable --build-directory /home/sto-technology/pro/ros2_pro/town_ws/build/mycar/build --no-deps install_data --install-dir /home/sto-technology/pro/ros2_pro/town_ws/install

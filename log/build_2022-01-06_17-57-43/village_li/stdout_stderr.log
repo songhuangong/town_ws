@@ -1,0 +1,17 @@
+running develop
+running egg_info
+writing village_li.egg-info/PKG-INFO
+writing dependency_links to village_li.egg-info/dependency_links.txt
+writing entry points to village_li.egg-info/entry_points.txt
+writing requirements to village_li.egg-info/requires.txt
+writing top-level names to village_li.egg-info/top_level.txt
+reading manifest file 'village_li.egg-info/SOURCES.txt'
+writing manifest file 'village_li.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/sto-technology/pro/ros2_pro/town_ws/install/lib/python3.8/site-packages/village-li.egg-link (link to .)
+Installing li4_node script to /home/sto-technology/pro/ros2_pro/town_ws/install/lib/village_li
+
+Installed /home/sto-technology/pro/ros2_pro/town_ws/build/village_li
+running install_data
+copying package.xml -> /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_li
+copying launch/village.launch.py -> /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_li/launch

@@ -1,0 +1,6 @@
+<launch>
+    <!-- 载入urdf -->
+    <param name="robot_descirption" testfile="$(find urdf01)/urdf/urdf/demo1.urdf"/>  
+    <!-- 启动rviz -->
+    <node pkg="rviz2" type="rviz2" name="rviz2"/>
+</launch>

@@ -1,0 +1,72 @@
+[0.218s] Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/sto-technology/pro/ros2_pro/town_ws/village_interface -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=On -Wall -Wextra -Wpedantic -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sto-technology/pro/ros2_pro/town_ws/install
+[0.437s] -- The C compiler identification is GNU 9.4.0
+[0.438s] -- The CXX compiler identification is GNU 9.4.0
+[0.439s] -- Check for working C compiler: /usr/bin/cc
+[0.455s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.457s] -- Detecting C compiler ABI info
+[0.537s] -- Detecting C compiler ABI info - done
+[0.551s] -- Detecting C compile features
+[0.552s] -- Detecting C compile features - done
+[0.556s] -- Check for working CXX compiler: /usr/bin/c++
+[0.650s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.651s] -- Detecting CXX compiler ABI info
+[0.738s] -- Detecting CXX compiler ABI info - done
+[0.749s] -- Detecting CXX compile features
+[0.749s] -- Detecting CXX compile features - done
+[0.752s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.775s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.775s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.940s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.969s] -- Found sensor_msgs: 2.0.4 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[0.999s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.007s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.097s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.125s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.201s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.382s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[1.396s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.482s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[1.641s] CMake Error at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):
+[1.641s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+[1.641s]   village_interface --arguments-file
+[1.641s]   /home/sto-technology/pro/ros2_pro/town_ws/build/village_interface/rosidl_adapter__arguments__village_interface.json
+[1.641s]   --output-dir
+[1.641s]   /home/sto-technology/pro/ros2_pro/town_ws/build/village_interface/rosidl_adapter/village_interface
+[1.641s]   --output-file
+[1.641s]   /home/sto-technology/pro/ros2_pro/town_ws/build/village_interface/rosidl_adapter/village_interface.idls)
+[1.642s]   returned error code 1:
+[1.642s] 
+[1.642s]   Error processing 'sensor_msgs/msg/Image image' of
+[1.642s]   'village_interface/Novel': 'sensor_msgs/msg/Image'
+[1.642s] 
+[1.642s]   Traceback (most recent call last):
+[1.642s] 
+[1.642s]     File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+[1.642s]       return _run_code(code, main_globals, None,
+[1.642s]     File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+[1.642s]       exec(code, run_globals)
+[1.642s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[1.642s]       sys.exit(main())
+[1.642s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main
+[1.642s]       abs_idl_file = convert_to_idl(
+[1.642s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[1.642s]       return convert_msg_to_idl(
+[1.642s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[1.643s]       msg = parse_message_string(package_name, input_file.stem, content)
+[1.643s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 516, in parse_message_string
+[1.643s]       Type(type_string, context_package_name=pkg_name),
+[1.643s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 276, in __init__
+[1.643s]       super(Type, self).__init__(
+[1.643s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 189, in __init__
+[1.643s]       raise InvalidResourceName(type_string)
+[1.643s] 
+[1.643s]   rosidl_adapter.parser.InvalidResourceName: sensor_msgs/msg/Image
+[1.643s] 
+[1.643s] Call Stack (most recent call first):
+[1.643s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[1.643s]   CMakeLists.txt:51 (rosidl_generate_interfaces)
+[1.643s] 
+[1.643s] 
+[1.643s] -- Configuring incomplete, errors occurred!
+[1.644s] See also "/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface/CMakeFiles/CMakeOutput.log".
+[1.649s] Invoked command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface' returned '1': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/sto-technology/pro/ros2_pro/town_ws/village_interface -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=On -Wall -Wextra -Wpedantic -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sto-technology/pro/ros2_pro/town_ws/install

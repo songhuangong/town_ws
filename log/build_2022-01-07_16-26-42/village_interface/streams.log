@@ -1,0 +1,9 @@
+[0.214s] Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/village_interface -- -j8 -l8
+[0.411s] -- Configuring incomplete, errors occurred!
+[0.412s] See also "/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface/CMakeFiles/CMakeOutput.log".
+[0.412s] CMake Error at CMakeLists.txt:39:
+[0.412s]   Parse error.  Expected a command name, got right paren with text ")".
+[0.413s] 
+[0.413s] 
+[0.414s] make: *** [Makefile:1228: cmake_check_build_system] Error 1
+[0.414s] Invoked command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/village_interface -- -j8 -l8

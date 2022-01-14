@@ -1,0 +1,5 @@
+[0.213s] Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/village_interface -- -j8 -l8
+[0.405s] CMake Error: The source directory "/home/sto-technology/pro/ros2_pro/town_ws/village_interface" does not exist.
+[0.406s] Specify --help for usage, or press the help button on the CMake GUI.
+[0.406s] make: *** [Makefile:1228: cmake_check_build_system] Error 1
+[0.411s] Invoked command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/village_interface -- -j8 -l8

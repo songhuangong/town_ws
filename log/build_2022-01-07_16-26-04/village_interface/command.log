@@ -1,0 +1,2 @@
+Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/village_interface -- -j8 -l8
+Invoked command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/village_interface -- -j8 -l8

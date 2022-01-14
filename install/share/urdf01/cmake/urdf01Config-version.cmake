@@ -1,0 +1,1 @@
+/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01/ament_cmake_core/urdf01Config-version.cmake

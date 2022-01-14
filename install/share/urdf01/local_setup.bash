@@ -1,0 +1,1 @@
+/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01/ament_cmake_environment_hooks/local_setup.bash

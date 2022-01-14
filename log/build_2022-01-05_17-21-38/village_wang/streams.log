@@ -1,0 +1,77 @@
+[0.381s] Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_wang': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sto-technology/pro/ros2_pro/town_ws/install/village_li:/opt/ros/foxy /usr/bin/cmake /home/sto-technology/pro/ros2_pro/town_ws/src/village_wang -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=On -Wall -Wextra -Wpedantic -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sto-technology/pro/ros2_pro/town_ws/install
+[0.441s] -- The C compiler identification is GNU 9.4.0
+[0.491s] -- The CXX compiler identification is GNU 9.4.0
+[0.498s] -- Check for working C compiler: /usr/bin/cc
+[0.565s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.566s] -- Detecting C compiler ABI info
+[0.634s] -- Detecting C compiler ABI info - done
+[0.648s] -- Detecting C compile features
+[0.648s] -- Detecting C compile features - done
+[0.651s] -- Check for working CXX compiler: /usr/bin/c++
+[0.732s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.733s] -- Detecting CXX compiler ABI info
+[0.842s] -- Detecting CXX compiler ABI info - done
+[0.853s] -- Detecting CXX compile features
+[0.853s] -- Detecting CXX compile features - done
+[0.855s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.875s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.875s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.035s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.053s] -- Found rclcpp: 2.4.0 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.090s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.096s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.172s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.196s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.267s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.317s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.318s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.319s] -- Looking for pthread.h
+[1.376s] -- Looking for pthread.h - found
+[1.376s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.436s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.436s] -- Looking for pthread_create in pthreads
+[1.490s] -- Looking for pthread_create in pthreads - not found
+[1.490s] -- Looking for pthread_create in pthread
+[1.551s] -- Looking for pthread_create in pthread - found
+[1.551s] -- Found Threads: TRUE  
+[1.692s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.754s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.754s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.755s] -- Configured cppcheck include dirs: 
+[1.755s] -- Configured cppcheck exclude dirs and/or files: 
+[1.755s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.755s] -- Configured cpplint exclude dirs and/or files: 
+[1.756s] -- Added test 'lint_cmake' to check CMake code style
+[1.757s] -- Added test 'uncrustify' to check C / C++ code style
+[1.757s] -- Configured uncrustify additional arguments: 
+[1.757s] -- Added test 'xmllint' to check XML markup files
+[1.761s] -- Configuring done
+[1.766s] -- Generating done
+[1.768s] -- Build files have been written to: /home/sto-technology/pro/ros2_pro/town_ws/build/village_wang
+[1.772s] Invoked command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_wang' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sto-technology/pro/ros2_pro/town_ws/install/village_li:/opt/ros/foxy /usr/bin/cmake /home/sto-technology/pro/ros2_pro/town_ws/src/village_wang -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=On -Wall -Wextra -Wpedantic -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sto-technology/pro/ros2_pro/town_ws/install
+[1.774s] Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_wang': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sto-technology/pro/ros2_pro/town_ws/install/village_li:/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/village_wang -- -j8 -l8
+[1.809s] [35m[1mScanning dependencies of target wang2_node[0m
+[1.836s] [ 50%] [32mBuilding CXX object CMakeFiles/wang2_node.dir/src/wang2.cpp.o[0m
+[3.843s] [100%] [32m[1mLinking CXX executable wang2_node[0m
+[3.949s] [100%] Built target wang2_node
+[3.958s] Invoked command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_wang' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sto-technology/pro/ros2_pro/town_ws/install/village_li:/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/village_wang -- -j8 -l8
+[3.986s] Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_wang': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sto-technology/pro/ros2_pro/town_ws/install/village_li:/opt/ros/foxy /usr/bin/cmake --install /home/sto-technology/pro/ros2_pro/town_ws/build/village_wang
+[3.992s] -- Install configuration: "RelWithDebInfo"
+[3.993s] -- Execute custom install script
+[3.993s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/ament_index/resource_index/package_run_dependencies/village_wang
+[4.002s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/ament_index/resource_index/parent_prefix_path/village_wang
+[4.009s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/environment/ament_prefix_path.sh
+[4.018s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/environment/ament_prefix_path.dsv
+[4.025s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/environment/path.sh
+[4.032s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/environment/path.dsv
+[4.039s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/local_setup.bash
+[4.047s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/local_setup.sh
+[4.055s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/local_setup.zsh
+[4.062s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/local_setup.dsv
+[4.071s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/package.dsv
+[4.078s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/ament_index/resource_index/packages/village_wang
+[4.086s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/cmake/village_wangConfig.cmake
+[4.094s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/cmake/village_wangConfig-version.cmake
+[4.103s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/package.xml
+[4.110s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/lib/village_wang/wang2_node
+[4.121s] Invoked command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_wang' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sto-technology/pro/ros2_pro/town_ws/install/village_li:/opt/ros/foxy /usr/bin/cmake --install /home/sto-technology/pro/ros2_pro/town_ws/build/village_wang

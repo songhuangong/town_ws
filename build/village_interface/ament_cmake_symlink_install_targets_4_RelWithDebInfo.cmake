@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface/rosidl_generator_py/village_interface/village_interface_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" "TARGETS" "village_interface__rosidl_typesupport_c__pyext" "DESTINATION" "lib/python3.8/site-packages/village_interface")

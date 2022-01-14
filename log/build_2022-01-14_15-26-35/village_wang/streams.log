@@ -1,0 +1,23 @@
+[0.630s] Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_wang': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/village_wang -- -j8 -l8
+[0.718s] [100%] Built target wang2_node
+[0.760s] Invoked command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_wang' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/village_wang -- -j8 -l8
+[0.821s] Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_wang': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/sto-technology/pro/ros2_pro/town_ws/build/village_wang
+[0.831s] -- Install configuration: "RelWithDebInfo"
+[0.832s] -- Execute custom install script
+[0.832s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/ament_index/resource_index/package_run_dependencies/village_wang
+[0.833s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/ament_index/resource_index/parent_prefix_path/village_wang
+[0.833s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/environment/ament_prefix_path.sh
+[0.833s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/environment/ament_prefix_path.dsv
+[0.834s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/environment/path.sh
+[0.834s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/environment/path.dsv
+[0.834s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/local_setup.bash
+[0.835s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/local_setup.sh
+[0.835s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/local_setup.zsh
+[0.836s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/local_setup.dsv
+[0.836s] -- Symlinking: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/package.dsv
+[0.848s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/ament_index/resource_index/packages/village_wang
+[0.849s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/cmake/village_wangConfig.cmake
+[0.849s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/cmake/village_wangConfig-version.cmake
+[0.849s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/share/village_wang/package.xml
+[0.850s] -- Up-to-date symlink: /home/sto-technology/pro/ros2_pro/town_ws/install/lib/village_wang/wang2_node
+[0.854s] Invoked command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_wang' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/sto-technology/pro/ros2_pro/town_ws/build/village_wang

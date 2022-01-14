@@ -1,0 +1,16 @@
+[0.249s] Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/village_interface -- -j8 -l8
+[0.502s] [ 10%] Built target village_interface__rosidl_generator_c
+[0.502s] [ 12%] Built target village_interface__cpp
+[0.502s] [ 23%] Built target village_interface__rosidl_typesupport_introspection_c
+[0.503s] [ 34%] Built target village_interface__rosidl_typesupport_c
+[0.503s] [ 44%] Built target village_interface__rosidl_typesupport_introspection_cpp
+[0.503s] [ 55%] Built target village_interface__rosidl_typesupport_cpp
+[0.503s] [ 65%] Built target village_interface__rosidl_typesupport_fastrtps_cpp
+[0.503s] [ 76%] Built target village_interface__rosidl_typesupport_fastrtps_c
+[0.503s] [ 76%] Built target village_interface
+[0.503s] [ 78%] Built target village_interface__py
+[0.503s] [ 87%] Built target village_interface__python
+[0.503s] [ 91%] Built target village_interface__rosidl_typesupport_c__pyext
+[0.503s] [ 95%] Built target village_interface__rosidl_typesupport_fastrtps_c__pyext
+[0.504s] [100%] Built target village_interface__rosidl_typesupport_introspection_c__pyext
+[0.507s] Invoked command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/village_interface -- -j8 -l8

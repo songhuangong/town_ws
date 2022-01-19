@@ -1,2 +1,0 @@
-/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:368: UserWarning: Unbuilt egg for mycar 0.0.0 (/home/sto-technology/pro/ros2_pro/town_ws/build/mycar)
-  self.local_index = Environment(self.shadow_path + sys.path)

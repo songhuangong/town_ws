@@ -1,3 +1,0 @@
-CMake Error: The source directory "/home/sto-technology/pro/ros2_pro/town_ws/village_interface" does not exist.
-Specify --help for usage, or press the help button on the CMake GUI.
-make: *** [Makefile:1228: cmake_check_build_system] Error 1

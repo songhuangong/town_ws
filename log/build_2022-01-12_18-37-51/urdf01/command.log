@@ -1,4 +1,0 @@
-Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/urdf01 -- -j8 -l8
-Invoked command in '/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/urdf01 -- -j8 -l8
-Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/sto-technology/pro/ros2_pro/town_ws/build/urdf01
-Invoked command in '/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01' returned '1': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/sto-technology/pro/ros2_pro/town_ws/build/urdf01

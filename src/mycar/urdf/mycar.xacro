@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<robot name="mycar" xmlns:xacro="http://ros.org/wiki/xacro"> 
+    <!-- xacro中包含内置变量 pi：3.141592653589793 -->
+    <!-- <test>${pi}</test> -->
+    <xacro:include filename="color.xacro"/>
+    <xacro:include filename="mybase.xacro"/>
+    <xacro:include filename="my_laser.xacro"/>
+    <!-- 集成运动控制 -->
+    <xacro:include filename="move.xacro"/>
+</robot>

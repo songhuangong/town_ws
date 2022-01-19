@@ -1,3 +1,0 @@
-[0.400s] Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_wang': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/village_wang -- -j8 -l8
-[0.473s] [100%] Built target wang2_node
-[0.483s] Invoked command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_wang' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/village_wang -- -j8 -l8

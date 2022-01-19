@@ -17,7 +17,10 @@ setup(
         (os.path.join('share', package_name, 'launch'), glob('launch/*.launch.py')),
         #  glob **  表示递归支持！
         (os.path.join('share', package_name, 'urdf'), glob('urdf/**')),
+        # 这里不能有层级关系（urdf/gazebo 这样不行。。）没办法，放平行
+        (os.path.join('share', package_name, 'urdfgazebo'), glob('urdfgazebo/**')),
         (os.path.join('share', package_name, 'config'), glob('config/**')),
+        (os.path.join('share', package_name, 'worlds'), glob('worlds/**')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,

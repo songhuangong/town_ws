@@ -1,7 +1,0 @@
--- Configuring incomplete, errors occurred!
-See also "/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface/CMakeFiles/CMakeOutput.log".
-CMake Error at CMakeLists.txt:39:
-  Parse error.  Expected a command name, got right paren with text ")".
-
-
-make: *** [Makefile:1228: cmake_check_build_system] Error 1

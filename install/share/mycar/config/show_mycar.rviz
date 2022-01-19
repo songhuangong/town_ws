@@ -6,9 +6,9 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /Grid1
         - /RobotModel1
         - /TF1
+        - /TF1/Frames1
       Splitter Ratio: 0.5
     Tree Height: 517
   - Class: rviz_common/Selection
@@ -83,29 +83,99 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        left_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wheel1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wheel2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wheel3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wheel4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
       Name: RobotModel
       TF Prefix: ""
       Update Interval: 0
       Value: true
       Visual Enabled: true
     - Class: rviz_default_plugins/TF
-      Enabled: false
+      Enabled: true
       Frame Timeout: 15
       Frames:
-        All Enabled: true
+        All Enabled: false
+        base_footprint:
+          Value: true
+        base_link:
+          Value: true
+        laser_link1:
+          Value: false
+        laser_link2:
+          Value: true
+        left_wheel:
+          Value: false
+        odom:
+          Value: true
+        right_wheel:
+          Value: true
+        wheel1:
+          Value: true
+        wheel2:
+          Value: true
+        wheel3:
+          Value: true
+        wheel4:
+          Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: false
       Tree:
-        {}
+        odom:
+          base_footprint:
+            base_link:
+              laser_link1:
+                {}
+              laser_link2:
+                {}
+              wheel1:
+                {}
+              wheel2:
+                {}
+              wheel3:
+                {}
+              wheel4:
+                {}
+            left_wheel:
+              {}
+            right_wheel:
+              {}
       Update Interval: 0
-      Value: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: base_footprint
+    Fixed Frame: odom
     Frame Rate: 30
   Name: root
   Tools:
@@ -145,25 +215,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 1.679835319519043
+      Distance: 7.46730375289917
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.05027427896857262
-        Y: 0.047821491956710815
-        Z: 0.0731377974152565
+        X: -0.02144503779709339
+        Y: 0.02455063723027706
+        Z: -0.12629108130931854
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.04020332917571068
+      Pitch: 0.024797162041068077
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.28537774085998535
+      Yaw: 0.060382042080163956
     Saved: ~
 Window Geometry:
   Displays:

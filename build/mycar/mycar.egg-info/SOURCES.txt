@@ -12,4 +12,11 @@ mycar.egg-info/requires.txt
 mycar.egg-info/top_level.txt
 mycar.egg-info/zip-safe
 resource/mycar
+urdf/color.xacro
+urdf/move.xacro
+urdf/my_laser.xacro
+urdf/mybase.xacro
 urdf/mycar.urdf
+urdf/mycar.xacro
+urdf/test.urdf
+worlds/box_house.world

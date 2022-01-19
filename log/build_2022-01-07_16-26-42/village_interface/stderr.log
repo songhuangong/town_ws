@@ -1,5 +1,0 @@
-CMake Error at CMakeLists.txt:39:
-  Parse error.  Expected a command name, got right paren with text ")".
-
-
-make: *** [Makefile:1228: cmake_check_build_system] Error 1

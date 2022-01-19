@@ -1,1 +1,0 @@
-[0.474s] Invoking command in '/home/sto-technology/pro/ros2_pro/town_ws/build/village_wang': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sto-technology/pro/ros2_pro/town_ws/install/village_li:/opt/ros/foxy /usr/bin/cmake --build /home/sto-technology/pro/ros2_pro/town_ws/build/village_wang -- -j8 -l8

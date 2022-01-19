@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<robot name="mycar" xmlns:xacro="http://ros.org/wiki/xacro"> 
+    
+    <!-- 地平面的位置   -->
+    <link name="base_footprint">
+        <visual>
+        <origin xyz="0 0 0.0" rpy="0 0 0"/>
+        <geometry>
+            <box size="0.00001 0.00001 0.00001"></box>
+        </geometry>
+        </visual>
+    </link>
+
+    <!-- 小车地盘相关参数 -->
+    <xacro:property name="base_length" value="0.3" />
+    <xacro:property name="base_width" value="0.2" />
+    <xacro:property name="base_depth" value="0.1" />
+    <xacro:property name="base_up" value="0.03" /> <!-- 小车地盘离地距离 -->
+    <xacro:property name="base_center_up" value="${base_depth/2 + base_up}" /> <!-- 小车中心点离地距离 -->
+
+
+    <!-- 主动轮相关参数 -->
+    <xacro:property name="main_wheel_radius" value="0.05"  />
+    <xacro:property name="main_wheel_length" value="0.015" />
+
+    
+    <!-- 从动轮相关参数 -->
+    <xacro:property name="sub_wheel_radius" value="0.015"  />
+
+    <!-- base link 小车中心的位置-->
+    <link name="base_link">
+        <visual>
+            <origin xyz="0 0 0.0" rpy="0 0 0"/>
+            <geometry>
+                <!-- <cylinder length="0.12" radius="0.10"/> -->
+                <box size="${base_length} ${base_width} ${base_depth}"></box>
+            </geometry>
+            <material name="orange"/>
+        </visual>
+        <!-- 碰撞检测设置 -->
+        <collision>
+            <origin xyz="0 0 0.0" rpy="0 0 0"/>
+            <geometry>
+                <!-- <cylinder length="0.12" radius="0.10"/> -->
+                <box size="${base_length} ${base_width} ${base_depth}"></box>
+            </geometry>
+        </collision>
+        <!-- 惯性矩阵设置 -->
+        <inertial>
+            <mass value="0.2"/>
+            <inertia ixx="0.0122666" ixy="0" ixz="0" iyy="0.0122666" iyz="0" izz="0.02"/>
+        </inertial>
+    </link>
+
+    <!-- 使小车距离地面上方0.05M -->
+    <joint name="link2footprint" type="fixed">
+        <parent link="base_footprint" />
+        <child link="base_link" />
+        <!-- （base_link距离base_footprint的位置） =  车身一半高度（0.05） + 离地距离（0.05） -->
+        <origin xyz="0 0 ${ base_depth / 2 + base_up }" />
+    </joint>
+
+
+
+    <!-- 主动轮宏实现 -->
+    <xacro:macro name="add_main_wheel" params="name type">
+        <link name="${name}_wheel">
+            <visual>
+                <!-- x方向翻转1.57.8弧度，及90度 -->
+                <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+                <geometry>
+                    <cylinder radius="0.05" length="0.015"></cylinder>
+                </geometry>
+                <material name="grey"/>
+            </visual>
+            <!-- 碰撞检测设置 -->
+            <collision>
+                <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+                <geometry>
+                    <cylinder radius="0.05" length="0.015"></cylinder>
+                </geometry>
+            </collision>
+            <!-- 惯性矩阵设置 -->
+            <inertial>
+                <mass value="0.2"/>
+                <inertia ixx="0.0122666" ixy="0" ixz="0" iyy="0.0122666" iyz="0" izz="0.02"/>
+            </inertial>
+        </link>
+
+        <joint name="${name}2link" type="continuous">
+            <parent link="base_link" />
+            <child link="${name}_wheel" />
+            <!-- X 方向：无偏移 
+            Y 方向：车身宽度的一半
+            Z 方向：baselink距离地面的高度 - 车轮半径 -->
+            <xacro:if value="${type == 'left'}">
+                <origin xyz="0 ${base_width/2} ${-(base_center_up - main_wheel_radius)}" />
+            </xacro:if>
+            <xacro:if value="${type == 'right'}">
+                <origin xyz="0 ${-base_width/2} ${-(base_center_up - main_wheel_radius)}" />
+            </xacro:if>
+
+
+            <!-- 绕Y轴转动 -->
+            <axis xyz="0 1 0" />
+        </joint>
+    </xacro:macro>
+
+    <!-- 添加主动轮 -->
+    <xacro:add_main_wheel name="left" type="left"/>
+    <xacro:add_main_wheel name="right" type="right"/>
+
+    <!-- 万向轮宏实现 -->
+    <xacro:macro name="add_sub_wheel" params="name pos">
+        <link name="wheel${name}">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <sphere radius="${sub_wheel_radius}"/>
+                </geometry>
+                <material name="light_black"/>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <sphere radius="${sub_wheel_radius}"/>
+                </geometry>
+            </collision>
+            <!-- 惯性矩阵设置 -->
+            <inertial>
+                <mass value="0.2"/>
+                <inertia ixx="0.0122666" ixy="0" ixz="0" iyy="0.0122666" iyz="0" izz="0.02"/>
+            </inertial>
+        </link>
+
+        <joint name="wheel${name}_joint" type="continuous">
+            <parent link="base_link" />
+            <child link="wheel${name}" />
+            <!-- 左上 -->
+            <xacro:if value="${pos == 'q'}">
+                <origin xyz="${base_length/2} ${base_width/2} ${-(base_center_up - sub_wheel_radius)}" />
+            </xacro:if>
+            <!-- 右上 -->
+            <xacro:if value="${pos == 'e'}">
+                <origin xyz="${-base_length/2} ${base_width/2} ${-(base_center_up - sub_wheel_radius)}" />
+            </xacro:if>
+            <!-- 左下 -->
+            <xacro:if value="${pos == 'z'}">
+                <origin xyz="${base_length/2} ${-base_width/2} ${-(base_center_up - sub_wheel_radius)}" />
+            </xacro:if>
+            <!-- 右下 -->
+            <xacro:if value="${pos == 'c'}">
+                <origin xyz="${-base_length/2} ${-base_width/2} ${-(base_center_up - sub_wheel_radius)}" />
+            </xacro:if>
+            
+            <axis xyz="0 1 0" />
+        </joint>
+    </xacro:macro>
+
+    <!-- 四个万向轮实现 -->
+    <xacro:add_sub_wheel name="1" pos="q"/> 
+    <xacro:add_sub_wheel name="2" pos="e"/> 
+    <xacro:add_sub_wheel name="3" pos="z"/> 
+    <xacro:add_sub_wheel name="4" pos="c"/> 
+
+    <gazebo reference="base_link">
+        <material>Gazebo/Red</material>
+    </gazebo>
+
+
+</robot>

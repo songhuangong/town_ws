@@ -1,4 +1,4 @@
-# 忽略目录
+# 忽略这个目录
 build/           
 install/        
 log/            

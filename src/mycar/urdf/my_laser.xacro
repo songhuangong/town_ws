@@ -3,6 +3,7 @@
     <!-- 雷达相关参数 -->
     <xacro:property name="laser_length" value="0.02" />
     <xacro:property name="laser_radius" value="0.02" />
+    <xacro:property name="laser_m" value="0.01" />
     
     <!-- 雷达宏实现 -->
     <xacro:macro name="add_laser" params="name type">
@@ -22,10 +23,8 @@
                 </geometry>
             </collision>
             <!-- 惯性矩阵设置 -->
-            <inertial>
-                <mass value="0.2"/>
-                <inertia ixx="0.0122666" ixy="0" ixz="0" iyy="0.0122666" iyz="0" izz="0.02"/>
-            </inertial>
+            <xacro:cylinder_inertial_matrix m="${laser_m}" r="${laser_radius}" h="${laser_length}" />
+
         </link>
 
         <joint name="laser_joint${name}" type="fixed">
@@ -42,7 +41,7 @@
 
             
             <!-- 设置关节旋转 -->
-            <axis xyz="0 0 1" />
+            <axis xyz="0 0 0" />
         </joint>
 
     </xacro:macro>

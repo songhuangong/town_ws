@@ -13,6 +13,7 @@ mycar.egg-info/top_level.txt
 mycar.egg-info/zip-safe
 resource/mycar
 urdf/color.xacro
+urdf/inertial_matrix.xacro
 urdf/move.xacro
 urdf/my_laser.xacro
 urdf/mybase.xacro

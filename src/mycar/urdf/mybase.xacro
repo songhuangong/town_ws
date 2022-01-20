@@ -15,17 +15,23 @@
     <xacro:property name="base_length" value="0.3" />
     <xacro:property name="base_width" value="0.2" />
     <xacro:property name="base_depth" value="0.1" />
-    <xacro:property name="base_up" value="0.03" /> <!-- 小车地盘离地距离 -->
+    <xacro:property name="base_up" value="0.02" /> <!-- 小车地盘离地距离 -->
     <xacro:property name="base_center_up" value="${base_depth/2 + base_up}" /> <!-- 小车中心点离地距离 -->
+    <xacro:property name="base_m" value="0.5" /> <!-- 地盘重量 -->
 
 
     <!-- 主动轮相关参数 -->
-    <xacro:property name="main_wheel_radius" value="0.05"  />
+    <xacro:property name="main_wheel_radius" value="0.03"  />
     <xacro:property name="main_wheel_length" value="0.015" />
+    <xacro:property name="main_wheel_m" value="0.1" />
 
     
     <!-- 从动轮相关参数 -->
     <xacro:property name="sub_wheel_radius" value="0.015"  />
+    <xacro:property name="sub_wheel_length" value="0.015" />
+    <xacro:property name="sub_wheel_m" value="0.1"  />
+    <xacro:property name="sub_wheel_offset1" value="0.05"  />
+    <xacro:property name="sub_wheel_offset2" value="0.02"  />
 
     <!-- base link 小车中心的位置-->
     <link name="base_link">
@@ -46,10 +52,7 @@
             </geometry>
         </collision>
         <!-- 惯性矩阵设置 -->
-        <inertial>
-            <mass value="0.2"/>
-            <inertia ixx="0.0122666" ixy="0" ixz="0" iyy="0.0122666" iyz="0" izz="0.02"/>
-        </inertial>
+        <xacro:Box_inertial_matrix m="${base_m}" l="${base_length}" w="${base_width}" h="${base_depth}" />
     </link>
 
     <!-- 使小车距离地面上方0.05M -->
@@ -69,7 +72,7 @@
                 <!-- x方向翻转1.57.8弧度，及90度 -->
                 <origin xyz="0 0 0" rpy="1.5708 0 0"/>
                 <geometry>
-                    <cylinder radius="0.05" length="0.015"></cylinder>
+                    <cylinder radius="${main_wheel_radius}" length="${main_wheel_length}"></cylinder>
                 </geometry>
                 <material name="grey"/>
             </visual>
@@ -77,14 +80,12 @@
             <collision>
                 <origin xyz="0 0 0" rpy="1.5708 0 0"/>
                 <geometry>
-                    <cylinder radius="0.05" length="0.015"></cylinder>
+                    <cylinder radius="${main_wheel_radius}" length="${main_wheel_length}"></cylinder>
                 </geometry>
             </collision>
             <!-- 惯性矩阵设置 -->
-            <inertial>
-                <mass value="0.2"/>
-                <inertia ixx="0.0122666" ixy="0" ixz="0" iyy="0.0122666" iyz="0" izz="0.02"/>
-            </inertial>
+            <xacro:cylinder_inertial_matrix m="${main_wheel_m}" r="${main_wheel_radius}" h="${main_wheel_length}" />
+
         </link>
 
         <joint name="${name}2link" type="continuous">
@@ -115,6 +116,9 @@
         <link name="wheel${name}">
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
+                <!-- <geometry>
+                    <cylinder radius="${sub_wheel_radius}" length="${sub_wheel_length}"></cylinder>
+                </geometry> -->
                 <geometry>
                     <sphere radius="${sub_wheel_radius}"/>
                 </geometry>
@@ -127,39 +131,45 @@
                 </geometry>
             </collision>
             <!-- 惯性矩阵设置 -->
-            <inertial>
-                <mass value="0.2"/>
-                <inertia ixx="0.0122666" ixy="0" ixz="0" iyy="0.0122666" iyz="0" izz="0.02"/>
-            </inertial>
+            <xacro:sphere_inertial_matrix m="${sub_wheel_m}" r="${sub_wheel_radius}" />
+
         </link>
 
         <joint name="wheel${name}_joint" type="continuous">
             <parent link="base_link" />
             <child link="wheel${name}" />
             <!-- 左上 -->
-            <xacro:if value="${pos == 'q'}">
+            <!-- <xacro:if value="${pos == 'q'}">
                 <origin xyz="${base_length/2} ${base_width/2} ${-(base_center_up - sub_wheel_radius)}" />
-            </xacro:if>
+            </xacro:if> -->
             <!-- 右上 -->
-            <xacro:if value="${pos == 'e'}">
-                <origin xyz="${-base_length/2} ${base_width/2} ${-(base_center_up - sub_wheel_radius)}" />
-            </xacro:if>
+            <!-- <xacro:if value="${pos == 'e'}">
+                <origin xyz="${-base_length/2} ${base_width/2 } ${-(base_center_up - sub_wheel_radius)}" />
+            </xacro:if> -->
             <!-- 左下 -->
-            <xacro:if value="${pos == 'z'}">
-                <origin xyz="${base_length/2} ${-base_width/2} ${-(base_center_up - sub_wheel_radius)}" />
-            </xacro:if>
+            <!-- <xacro:if value="${pos == 'z'}">
+                <origin xyz="${base_length/2} ${-base_width/2 } ${-(base_center_up - sub_wheel_radius)}" />
+            </xacro:if> -->
             <!-- 右下 -->
+            <!-- <xacro:if value="${pos == 'c'}">
+                <origin xyz="${-base_length/2} ${-base_width/2 } ${-(base_center_up - sub_wheel_radius)}" />
+            </xacro:if> -->
+
+            <xacro:if value="${pos == 'z'}">
+                <origin xyz="${base_length/2} 0 ${-(base_center_up - sub_wheel_radius)}" />
+            </xacro:if>
+
             <xacro:if value="${pos == 'c'}">
-                <origin xyz="${-base_length/2} ${-base_width/2} ${-(base_center_up - sub_wheel_radius)}" />
+                <origin xyz="${-base_length/2} 0 ${-(base_center_up - sub_wheel_radius)}" />
             </xacro:if>
             
-            <axis xyz="0 1 0" />
+            <axis xyz="0 1 1" />
         </joint>
     </xacro:macro>
 
     <!-- 四个万向轮实现 -->
-    <xacro:add_sub_wheel name="1" pos="q"/> 
-    <xacro:add_sub_wheel name="2" pos="e"/> 
+    <!-- <xacro:add_sub_wheel name="1" pos="q"/> 
+    <xacro:add_sub_wheel name="2" pos="e"/>  -->
     <xacro:add_sub_wheel name="3" pos="z"/> 
     <xacro:add_sub_wheel name="4" pos="c"/> 
 

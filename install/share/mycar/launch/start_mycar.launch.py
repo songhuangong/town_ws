@@ -108,7 +108,7 @@ def generate_launch_description():
         # 记载rviz2 配置文件
         arguments=['-d', rviz_config_file],
         output='screen',
-        )
+    )
 
     # Start Gazebo server
     start_gazebo_cmd = IncludeLaunchDescription(

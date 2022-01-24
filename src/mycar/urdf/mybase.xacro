@@ -12,26 +12,29 @@
     </link>
 
     <!-- 小车地盘相关参数 -->
-    <xacro:property name="base_length" value="0.3" />
-    <xacro:property name="base_width" value="0.2" />
-    <xacro:property name="base_depth" value="0.1" />
-    <xacro:property name="base_up" value="0.02" /> <!-- 小车地盘离地距离 -->
+    <xacro:property name="base_length" value="1.21" />
+    <xacro:property name="base_width" value="0.738" />
+    <xacro:property name="base_depth" value="0.35" />
+    <xacro:property name="base_up" value="0.028" /> <!-- 小车地盘离地距离 -->
     <xacro:property name="base_center_up" value="${base_depth/2 + base_up}" /> <!-- 小车中心点离地距离 -->
     <xacro:property name="base_m" value="0.5" /> <!-- 地盘重量 -->
 
 
     <!-- 主动轮相关参数 -->
-    <xacro:property name="main_wheel_radius" value="0.03"  />
-    <xacro:property name="main_wheel_length" value="0.015" />
+    <xacro:property name="main_wheel_radius" value="0.10"  />
+    <xacro:property name="main_wheel_length" value="0.06" />
     <xacro:property name="main_wheel_m" value="0.1" />
 
     
     <!-- 从动轮相关参数 -->
-    <xacro:property name="sub_wheel_radius" value="0.015"  />
-    <xacro:property name="sub_wheel_length" value="0.015" />
+    <xacro:property name="sub_wheel_radius" value="0.05"  />
+    <xacro:property name="sub_wheel_length" value="0.055" />
     <xacro:property name="sub_wheel_m" value="0.1"  />
-    <xacro:property name="sub_wheel_offset1" value="0.05"  />
-    <xacro:property name="sub_wheel_offset2" value="0.02"  />
+
+
+    <xacro:property name="wheel_offset_up" value="0.102"  />
+    <xacro:property name="main_wheel_offset_left" value="0.039"  />
+    <xacro:property name="sub_wheel_offset_left" value="0.091"  />
 
     <!-- base link 小车中心的位置-->
     <link name="base_link">
@@ -95,10 +98,10 @@
             Y 方向：车身宽度的一半
             Z 方向：baselink距离地面的高度 - 车轮半径 -->
             <xacro:if value="${type == 'left'}">
-                <origin xyz="0 ${base_width/2} ${-(base_center_up - main_wheel_radius)}" />
+                <origin xyz="0 ${base_width/2 - main_wheel_offset_left} ${-(base_center_up - main_wheel_radius)}" />
             </xacro:if>
             <xacro:if value="${type == 'right'}">
-                <origin xyz="0 ${-base_width/2} ${-(base_center_up - main_wheel_radius)}" />
+                <origin xyz="0 ${-base_width/2 + main_wheel_offset_left} ${-(base_center_up - main_wheel_radius)}" />
             </xacro:if>
 
 
@@ -140,31 +143,32 @@
             <child link="wheel${name}" />
             <!-- 左上 -->
             <!-- <xacro:if value="${pos == 'q'}">
-                <origin xyz="${base_length/2} ${base_width/2} ${-(base_center_up - sub_wheel_radius)}" />
+                <origin xyz="${base_length/2 - wheel_offset_up} ${base_width/2 - sub_wheel_offset_left} ${-(base_center_up - sub_wheel_radius)}" />
             </xacro:if> -->
             <!-- 右上 -->
             <!-- <xacro:if value="${pos == 'e'}">
-                <origin xyz="${-base_length/2} ${base_width/2 } ${-(base_center_up - sub_wheel_radius)}" />
+                <origin xyz="${-base_length/2 + wheel_offset_up} ${base_width/2 - sub_wheel_offset_left} ${-(base_center_up - sub_wheel_radius)}" />
             </xacro:if> -->
             <!-- 左下 -->
             <!-- <xacro:if value="${pos == 'z'}">
-                <origin xyz="${base_length/2} ${-base_width/2 } ${-(base_center_up - sub_wheel_radius)}" />
+                <origin xyz="${base_length/2 - wheel_offset_up} ${-base_width/2 + sub_wheel_offset_left} ${-(base_center_up - sub_wheel_radius)}" />
             </xacro:if> -->
             <!-- 右下 -->
             <!-- <xacro:if value="${pos == 'c'}">
-                <origin xyz="${-base_length/2} ${-base_width/2 } ${-(base_center_up - sub_wheel_radius)}" />
+                <origin xyz="${-base_length/2 + wheel_offset_up} ${-base_width/2 + sub_wheel_offset_left} ${-(base_center_up - sub_wheel_radius)}" />
             </xacro:if> -->
 
             <xacro:if value="${pos == 'z'}">
-                <origin xyz="${base_length/2} 0 ${-(base_center_up - sub_wheel_radius)}" />
+                <origin xyz="${base_length/2 - wheel_offset_up} 0 ${-(base_center_up - sub_wheel_radius)}" />
             </xacro:if>
 
             <xacro:if value="${pos == 'c'}">
-                <origin xyz="${-base_length/2} 0 ${-(base_center_up - sub_wheel_radius)}" />
+                <origin xyz="${-base_length/2 + wheel_offset_up} 0 ${-(base_center_up - sub_wheel_radius)}" />
             </xacro:if>
             
             <axis xyz="0 1 1" />
         </joint>
+        
     </xacro:macro>
 
     <!-- 四个万向轮实现 -->

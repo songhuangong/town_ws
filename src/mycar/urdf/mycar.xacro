@@ -6,6 +6,7 @@
     <xacro:include filename="inertial_matrix.xacro"/>
     <xacro:include filename="mybase.xacro"/>
     <xacro:include filename="my_laser.xacro"/>
+    <xacro:include filename="my_imu.xacro"/>
     <!-- 集成运动控制 -->
     <xacro:include filename="move.xacro"/>
 </robot>

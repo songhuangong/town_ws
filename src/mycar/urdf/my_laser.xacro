@@ -58,4 +58,53 @@
         <material>Gazebo/Black</material>
     </gazebo>
 
+    <gazebo reference="laser_link1">
+        <sensor name="laser_sensor" type="ray">
+            <always_on>true</always_on>
+            <visualize>true</visualize>
+            <pose>-0.032 0 0.171 0 0 0</pose>
+            <update_rate>5</update_rate>
+            <ray>
+                <!-- 激光雷达扫描参数设置 -->
+                <scan>
+                    <horizontal>
+                        <!-- 360条光束（扫描密度） -->
+                        <samples>360</samples>
+                        <!-- 采样,每n条光束有一条测量距离，为了减轻仿真压力 -->
+                        <resolution>1</resolution>
+                        <!-- 扫描范围，单位弧度 -->
+                        <min_angle>${-pi/2}</min_angle>
+                        <max_angle>${pi}</max_angle>
+                    </horizontal>
+                </scan>
+                <!-- 雷达检测范围和精度 -->
+                <range>
+                    <!-- 10厘米以内的探测不到 -->
+                    <min>0.100000</min>
+                    <!-- 5米之外的探测不到 -->
+                    <max>5.0</max>
+                    <!-- 探测精度为1厘米 -->
+                    <resolution>0.01</resolution>
+                </range>
+                <!-- 添加高斯噪音（贴近真实的环境） -->
+                <noise>
+                    <type>gaussian</type>
+                    <mean>0.0</mean>
+                    <stddev>0.01</stddev>
+                </noise>
+            </ray>
+            <plugin name="laserscan" filename="libgazebo_ros_ray_sensor.so">
+                <ros>
+                    <!-- <namespace>/tb3</namespace> -->
+                    <!-- 话题发布 -->
+                    <remapping>~/out:=/scan</remapping>
+                </ros>
+                <!-- 雷达消息类型 -->
+                <output_type>sensor_msgs/LaserScan</output_type>
+                <!-- 关联到哪个link -->
+                <frame_name>laser_link1</frame_name>
+            </plugin>
+        </sensor>
+    </gazebo>
+
 </robot>

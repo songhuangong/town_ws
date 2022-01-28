@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<robot name="mycar" xmlns:xacro="http://ros.org/wiki/xacro">    
+    <!-- 超声波相关参数 -->
+    <xacro:property name="ultra_length" value="0.02" />
+    <xacro:property name="ultra_radius" value="0.02" />
+    <xacro:property name="ultra_m" value="0.01" />
+    
+    <!-- 超声波宏实现 -->
+    <xacro:macro name="add_ultra" params="name type">
+        <link name="ultra_link${name}">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <cylinder length="${ultra_length}" radius="${ultra_radius}"/>
+                </geometry>
+                <material name="black"/>
+            </visual>
+            <!-- 碰撞检测设置 -->
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <cylinder length="${ultra_length}" radius="${ultra_radius}"/>
+                </geometry>
+            </collision>
+            <!-- 惯性矩阵设置 -->
+            <xacro:cylinder_inertial_matrix m="${ultra_m}" r="${ultra_radius}" h="${ultra_length}" />
+
+        </link>
+
+        <joint name="ultra_joint${name}" type="fixed">
+            <parent link="base_link" />
+            <child link="ultra_link${name}" />
+
+
+            <xacro:if value="${type == 'head'}">
+                <origin xyz="${base_length/2 + ultra_radius} 0 0" />
+            </xacro:if>
+            <xacro:if value="${type == 'tail'}">
+                <origin xyz="${-base_length/2 - ultra_radius} 0 0" />
+            </xacro:if>
+
+            
+            <!-- 设置关节旋转 -->
+            <axis xyz="0 0 0" />
+        </joint>
+
+    </xacro:macro>
+
+    <!-- 调用宏添加雷达(type这个参数不能是数字) -->
+    <xacro:add_ultra name="1" type="head"/>
+    <xacro:add_ultra name="2" type="tail"/>
+
+
+
+    <!-- ～～～～～～～～～～～～～gazebo～～～～～～～～～～～～～～～～～ -->
+
+    <xacro:macro name="add_ultra_gazebo" params="name type">
+        <gazebo reference="ultra_link${name}">
+            <material>Gazebo/Green</material>
+        </gazebo>
+
+
+        <gazebo reference="ultra_link${name}">
+            <sensor type="ray" name="range_sensor${name}">
+                <always_on>true</always_on>
+                <visualize>true</visualize>
+                <ray>
+                    <scan>
+                        <horizontal>
+                            <samples>10</samples>
+                            <resolution>1</resolution>
+
+                            <xacro:if value="${type == 'head'}">
+                                <min_angle>-0.087</min_angle>
+                                <max_angle>0.087</max_angle>
+                            </xacro:if>
+                            <xacro:if value="${type == 'tail'}">
+                                <min_angle>${-0.087 + pi}</min_angle>
+                                <max_angle>${0.087 + pi}</max_angle>
+                                 <!-- <min_angle>-0.087</min_angle>
+                                <max_angle>0.087</max_angle> -->
+                            </xacro:if>  
+
+
+                        </horizontal>
+                        <vertical>
+                            <samples>10</samples>
+                            <resolution>1</resolution>
+                            <min_angle>-0.087</min_angle>
+                            <max_angle>0.087</max_angle>
+                        </vertical>
+                    </scan>
+                    <range>
+                        <min>0.10</min>
+                        <max>5.0</max>
+                        <resolution>0.01</resolution>
+                    </range>
+                    <!-- Using gazebo's noise instead of plugin's -->
+                    <noise>
+                        <type>gaussian</type>
+                        <mean>0.0</mean>
+                        <stddev>0.01</stddev>
+                    </noise>
+                </ray>
+                <!-- Using gazebo's update rate instead of plugin's -->
+                <update_rate>1</update_rate>
+                <plugin name="ultra_range_plugin${name}" filename="libgazebo_ros_ray_sensor.so">
+                    <!-- Change namespace and output topic so published topic is /rrbot/laser/scan -->
+                    <ros>
+                        <!-- <namespace>/rrbot</namespace>
+                        <argument>~/out:=range</argument> -->
+                        <remapping>~/out:=/range${name}</remapping>
+                    </ros>
+                    <!-- Set output to sensor_msgs/Range to get same output type as gazebo_ros_range -->
+                    <output_type>sensor_msgs/Range</output_type>
+                    <!-- 关联到哪个link -->
+                    <frame_name>ultra_link${name}</frame_name>
+                </plugin>
+            </sensor>
+        </gazebo>
+        
+    </xacro:macro>
+
+    <xacro:add_ultra_gazebo name="1" type="head"/>
+    <xacro:add_ultra_gazebo name="2" type="tail"/>
+
+    
+
+
+
+</robot>

@@ -15,8 +15,10 @@ resource/mycar
 urdf/color.xacro
 urdf/inertial_matrix.xacro
 urdf/move.xacro
+urdf/my_camera.xacro
 urdf/my_imu.xacro
 urdf/my_laser.xacro
+urdf/my_ultrasound.xacro
 urdf/mybase.xacro
 urdf/mycar.urdf
 urdf/mycar.xacro

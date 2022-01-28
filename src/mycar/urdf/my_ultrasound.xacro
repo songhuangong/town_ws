@@ -32,11 +32,18 @@
             <child link="ultra_link${name}" />
 
 
-            <xacro:if value="${type == 'head'}">
-                <origin xyz="${base_length/2 + ultra_radius} 0 0" />
+            <xacro:if value="${type == 'head_left'}">
+                <origin xyz="${base_length/2 + ultra_radius} 0.149 0 "/>
             </xacro:if>
-            <xacro:if value="${type == 'tail'}">
-                <origin xyz="${-base_length/2 - ultra_radius} 0 0" />
+            <xacro:if value="${type == 'tail_left'}">
+                <origin xyz="${-base_length/2 - ultra_radius} 0.149 0" />
+            </xacro:if>
+
+            <xacro:if value="${type == 'head_right'}">
+                <origin xyz="${base_length/2 + ultra_radius} -0.149 0" />
+            </xacro:if>
+            <xacro:if value="${type == 'tail_right'}">
+                <origin xyz="${-base_length/2 - ultra_radius} -0.149 0" />
             </xacro:if>
 
             
@@ -46,9 +53,11 @@
 
     </xacro:macro>
 
-    <!-- 调用宏添加雷达(type这个参数不能是数字) -->
-    <xacro:add_ultra name="1" type="head"/>
-    <xacro:add_ultra name="2" type="tail"/>
+    <!-- 调用宏(type这个参数不能是数字) -->
+    <xacro:add_ultra name="1" type="head_left"/>
+    <xacro:add_ultra name="2" type="head_right"/>
+    <xacro:add_ultra name="3" type="tail_left"/>
+    <xacro:add_ultra name="4" type="tail_right"/>
 
 
 
@@ -70,11 +79,11 @@
                             <samples>10</samples>
                             <resolution>1</resolution>
 
-                            <xacro:if value="${type == 'head'}">
+                            <xacro:if value="${type == 'head_left' or type == 'head_right'}">
                                 <min_angle>-0.087</min_angle>
                                 <max_angle>0.087</max_angle>
                             </xacro:if>
-                            <xacro:if value="${type == 'tail'}">
+                            <xacro:if value="${type == 'tail_left' or type == 'tail_right'}">
                                 <min_angle>${-0.087 + pi}</min_angle>
                                 <max_angle>${0.087 + pi}</max_angle>
                                  <!-- <min_angle>-0.087</min_angle>
@@ -121,10 +130,11 @@
         
     </xacro:macro>
 
-    <xacro:add_ultra_gazebo name="1" type="head"/>
-    <xacro:add_ultra_gazebo name="2" type="tail"/>
 
-    
+    <xacro:add_ultra_gazebo name="1" type="head_left"/>
+    <xacro:add_ultra_gazebo name="2" type="head_right"/>
+    <xacro:add_ultra_gazebo name="3" type="tail_left"/>
+    <xacro:add_ultra_gazebo name="4" type="tail_right"/>
 
 
 

@@ -1,1 +1,0 @@
-/home/sto-technology/pro/ros2_pro/town_ws/village_interface/msg/Novel.msg

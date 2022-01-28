@@ -1,1 +1,0 @@
-/home/sto-technology/pro/ros2_pro/town_ws/src/urdf01/launch/demo01.launch.py

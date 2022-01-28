@@ -1,9 +1,0 @@
-/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01/CMakeFiles/install/strip.dir
-/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01/CMakeFiles/install/local.dir
-/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01/CMakeFiles/install.dir
-/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01/CMakeFiles/list_install_components.dir
-/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01/CMakeFiles/rebuild_cache.dir
-/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01/CMakeFiles/edit_cache.dir
-/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01/CMakeFiles/test.dir
-/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01/CMakeFiles/urdf01_uninstall.dir
-/home/sto-technology/pro/ros2_pro/town_ws/build/urdf01/CMakeFiles/uninstall.dir

@@ -1,1 +1,0 @@
-/home/sto-technology/pro/ros2_pro/town_ws/build/village_interface/rosidl_typesupport_introspection_c/village_interface/srv/detail/money__rosidl_typesupport_introspection_c.h

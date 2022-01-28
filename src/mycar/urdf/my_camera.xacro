@@ -7,7 +7,7 @@
     <xacro:property name="camera_height" value="0.025" /> <!-- 摄像头高度(z) -->
     <xacro:property name="camera_x" value="${base_length / 2}" /> <!-- 摄像头安装的x坐标 -->
     <xacro:property name="camera_y" value="0.0" /> <!-- 摄像头安装的y坐标 -->
-    <xacro:property name="camera_z" value="${base_depth / 2 + camera_height / 2}" /> <!-- 摄像头安装的z坐标:底盘高度 / 2 + 摄像头高度 / 2  -->
+    <xacro:property name="camera_z" value="${0.192 - base_depth / 2 }" /> <!-- 摄像头安装的z坐标:底盘高度 / 2 + 摄像头高度 / 2  -->
 
     <xacro:property name="camera_m" value="0.01" /> <!-- 摄像头质量 -->
 

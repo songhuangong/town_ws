@@ -8,6 +8,10 @@
                     <remapping>cmd_vel:=cmd_vel</remapping>
                     <remapping>odom:=odom</remapping>
                 </ros> -->
+                <remapping>/tf:=tf</remapping>
+            <ros>
+                <remapping>odom:=odom</remapping>
+            </ros>
             <!-- wheels -->
             <left_joint>left2link</left_joint>
             <right_joint>right2link</right_joint>
@@ -26,6 +30,7 @@
             <robot_base_frame>base_footprint</robot_base_frame>
         </plugin>
 
+        <!-- 这个去掉貌似也没啥影响 -->
         <plugin name="car_joint_state" filename="libgazebo_ros_joint_state_publisher.so">
             <ros>
                 <remapping>~/out:=joint_states</remapping>
@@ -33,7 +38,6 @@
             <update_rate>30</update_rate>
             <joint_name>left2link</joint_name>
             <joint_name>right2link</joint_name>
-            <!-- <joint_name>caster_joint</joint_name> -->
         </plugin>
 
 

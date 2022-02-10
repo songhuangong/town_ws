@@ -21,6 +21,8 @@ setup(
         (os.path.join('share', package_name, 'urdfgazebo'), glob('urdfgazebo/**')),
         (os.path.join('share', package_name, 'config'), glob('config/**')),
         (os.path.join('share', package_name, 'worlds'), glob('worlds/**')),
+        (os.path.join('share', package_name, 'maps'), glob('maps/**')),
+        (os.path.join('share', package_name, 'params'), glob('params/**')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,

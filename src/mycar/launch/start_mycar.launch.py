@@ -263,6 +263,6 @@ def generate_launch_description():
     # ld.add_action(start_gazebo_client_cmd)
     
     # 启动nav2
-    ld.add_action(start_ros2_navigation_cmd)
+    # ld.add_action(start_ros2_navigation_cmd)
 
     return ld

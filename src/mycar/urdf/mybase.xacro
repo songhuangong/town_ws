@@ -66,8 +66,6 @@
         <origin xyz="0 0 ${ base_depth / 2 + base_up }" />
     </joint>
 
-
-
     <!-- 主动轮宏实现 -->
     <xacro:macro name="add_main_wheel" params="name type">
         <link name="${name}_wheel">
@@ -113,6 +111,7 @@
     <!-- 添加主动轮 -->
     <xacro:add_main_wheel name="left" type="left"/>
     <xacro:add_main_wheel name="right" type="right"/>
+
 
     <!-- 万向轮宏实现 -->
     <xacro:macro name="add_sub_wheel" params="name pos">

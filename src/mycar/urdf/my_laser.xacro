@@ -73,8 +73,8 @@
                         <!-- 采样,每n条光束有一条测量距离，为了减轻仿真压力 -->
                         <resolution>1</resolution>
                         <!-- 扫描范围，单位弧度 -->
-                        <min_angle>${-pi/2}</min_angle>
-                        <max_angle>${pi}</max_angle>
+                        <min_angle>${-pi/2 + pi/180*3 }</min_angle>
+                        <max_angle>${pi - pi/180*3}</max_angle>
                     </horizontal>
                 </scan>
                 <!-- 雷达检测范围和精度 -->

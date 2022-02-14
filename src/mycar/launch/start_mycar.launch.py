@@ -1,5 +1,7 @@
 import os
 import time
+from ament_index_python.packages import get_package_share_directory
+
 from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
@@ -23,7 +25,8 @@ def generate_launch_description():
     nav2_params_path = 'params/nav2_params.yaml'
 
 
-    nav2_dir = FindPackageShare(package='nav2_bringup').find('nav2_bringup') 
+    # nav2_dir = FindPackageShare(package='nav2_bringup').find('nav2_bringup') 
+    nav2_dir = get_package_share_directory('nav2_bringup')
     nav2_launch_dir = os.path.join(nav2_dir, 'launch') 
     static_map_path = os.path.join(pkg_share, map_file_path)
     nav2_params_path = os.path.join(pkg_share, nav2_params_path)
@@ -37,9 +40,15 @@ def generate_launch_description():
     slam = LaunchConfiguration('slam')
     map_yaml_file = LaunchConfiguration('map')
     params_file = LaunchConfiguration('params_file')
+    use_composition = LaunchConfiguration('use_composition')
+
+
+    declare_use_composition_cmd = DeclareLaunchArgument(
+        'use_composition', 
+        default_value='True',
+        description='Whether to compose bringup'
+    )
     
-
-
     declare_use_sim_time_cmd = DeclareLaunchArgument(
         name='use_sim_time',
         default_value='True',
@@ -78,7 +87,7 @@ def generate_launch_description():
 
     declare_autostart_cmd = DeclareLaunchArgument(
         name='autostart', 
-        default_value='true',
+        default_value='True',
         description='Automatically startup the nav2 stack')
 
 
@@ -102,14 +111,9 @@ def generate_launch_description():
     
     declare_rviz_config_file_cmd = DeclareLaunchArgument(
         'rviz_config',
-        default_value=os.path.join(pkg_share, 'config', 'show_mycar.rviz'),
+        default_value=os.path.join(pkg_share, 'config', 'show_agv.rviz'),
         description='Full path to the RVIZ config file to use')
 
-    # test
-    print("!!~~~~~~~~~~~~`",os.path.join(pkg_share, 'config', 'show_mycar.rviz'))
-    print("~~~~~~~~~~~~!",rviz_config_file.describe(),
-                          rviz_config_file.variable_name
-                          )
     world = LaunchConfiguration('world')
 
     declare_world_cmd = DeclareLaunchArgument(
@@ -206,13 +210,13 @@ def generate_launch_description():
     )
 
 
-    robot_localization_node = Node(
-         package='robot_localization',
-         executable='ekf_node',
-         name='ekf_filter_node',
-         output='screen',
-         parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}]
-    )
+    # robot_localization_node = Node(
+    #      package='robot_localization',
+    #      executable='ekf_node',
+    #      name='ekf_filter_node',
+    #      output='screen',
+    #      parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}]
+    # )
 
 
     # Launch the ROS 2 Navigation Stack
@@ -224,7 +228,8 @@ def generate_launch_description():
                             'map': map_yaml_file,
                             'use_sim_time': use_sim_time,
                             'params_file': params_file,
-                            'autostart': autostart}.items())
+                            'autostart': autostart,
+                            'use_composition': use_composition}.items())
 
 
 
@@ -237,6 +242,8 @@ def generate_launch_description():
     ld.add_action(declare_namespace_cmd)
     ld.add_action(declare_use_namespace_cmd)
     ld.add_action(declare_autostart_cmd)
+    ld.add_action(declare_use_composition_cmd)
+
     ld.add_action(declare_map_yaml_cmd)
     ld.add_action(declare_params_file_cmd)
     ld.add_action(declare_slam_cmd)
@@ -263,6 +270,6 @@ def generate_launch_description():
     # ld.add_action(start_gazebo_client_cmd)
     
     # 启动nav2
-    # ld.add_action(start_ros2_navigation_cmd)
+    ld.add_action(start_ros2_navigation_cmd)
 
     return ld

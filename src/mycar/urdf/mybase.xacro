@@ -3,12 +3,6 @@
     
     <!-- 地平面的位置   -->
     <link name="base_footprint">
-        <visual>
-        <origin xyz="0 0 0.0" rpy="0 0 0"/>
-        <geometry>
-            <box size="0.00001 0.00001 0.00001"></box>
-        </geometry>
-        </visual>
     </link>
 
     <!-- 小车地盘相关参数 -->

@@ -20,8 +20,12 @@ def generate_launch_description():
     # test_urdf_name = "test.urdf"
     xacro_name = "mycar.xacro"
     robot_name_in_model = 'mycar'
+
     world_file_path = 'worlds/box_house.world'
+    # world_file_path = 'worlds/empty.world'
+
     map_file_path = 'maps/my_map.yaml'
+
     nav2_params_path = 'params/nav2_params.yaml'
 
 
@@ -249,25 +253,29 @@ def generate_launch_description():
     ld.add_action(declare_slam_cmd)
     
 
+    # Gazebo相关
+    ld.add_action(start_gazebo_cmd)
+    # ld.add_action(start_gazebo_server_cmd)
+    # ld.add_action(start_gazebo_client_cmd)
+
+    # 机器人模型产卵
+    ld.add_action(spawn_entity_cmd)
+
+
     # action
     ld.add_action(robot_state_publisher_node)
     ld.add_action(joint_state_publisher_node)
     # ld.add_action(joint_state_publisher_node_gui)
 
-
-    # 机器人模型产卵
-    ld.add_action(spawn_entity_cmd)
-
+    ld.add_action(rviz2_node)
+    
     # 数据融合节点
     # ld.add_action(robot_localization_node)
 
 
 
-    ld.add_action(rviz2_node)
-    # Gazebo相关
-    ld.add_action(start_gazebo_cmd)
-    # ld.add_action(start_gazebo_server_cmd)
-    # ld.add_action(start_gazebo_client_cmd)
+    
+    
     
     # 启动nav2
     ld.add_action(start_ros2_navigation_cmd)

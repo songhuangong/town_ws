@@ -89,8 +89,9 @@ controller_server:
   ros__parameters:
     use_sim_time: True
     controller_frequency: 20.0
+    # 控制器服务器在将接收到的里程计消息的速度部分发送到控制器插件之前对其进行过滤。低于此阈值（以 m/s 为单位）的里程计值将设置为 0.0。
     min_x_velocity_threshold: 0.001
-    min_y_velocity_threshold: 0.5
+    min_y_velocity_threshold: 0.001
     min_theta_velocity_threshold: 0.001
     progress_checker_plugin: "progress_checker"
     goal_checker_plugin: "goal_checker"
@@ -99,13 +100,16 @@ controller_server:
     # Progress checker parameters
     progress_checker:
       plugin: "nav2_controller::SimpleProgressChecker"
-      required_movement_radius: 0.5
+      required_movement_radius: 0.62
       movement_time_allowance: 10.0
     # Goal checker parameters
     goal_checker:
       plugin: "nav2_controller::SimpleGoalChecker"
-      xy_goal_tolerance: 0.25
-      yaw_goal_tolerance: 0.25
+      
+      # 目标公差
+      xy_goal_tolerance: 0.05   # 距离上，和目标相差0.25（m）就达标了
+      yaw_goal_tolerance: 0.05  # 角度上，和目标相差0.25（弧度）就达标了
+
       stateful: True
     # DWB parameters
     FollowPath:
@@ -113,29 +117,38 @@ controller_server:
       debug_trajectory_details: True
       min_vel_x: 0.0
       min_vel_y: 0.0
-      max_vel_x: 0.26
+      max_vel_x: 1.5
       max_vel_y: 0.0
-      max_vel_theta: 1.0
+      max_vel_theta: 0.6
       min_speed_xy: 0.0
-      max_speed_xy: 0.26
+      max_speed_xy: 1.5
       min_speed_theta: 0.0
       # Add high threshold velocity for turtlebot 3 issue.
       # https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/75
-      acc_lim_x: 2.5
+      acc_lim_x: 5.0
       acc_lim_y: 0.0
       acc_lim_theta: 3.2
-      decel_lim_x: -2.5
+      decel_lim_x: -5.0
       decel_lim_y: 0.0
       decel_lim_theta: -3.2
+      # 控制X方向速度样本数量
       vx_samples: 20
-      vy_samples: 5
-      vtheta_samples: 20
-      sim_time: 1.7
-      linear_granularity: 0.05
+      vy_samples: 0
+      # 控制旋转速度样本数量
+      vtheta_samples: 40
+      # 提前模拟时间
+      sim_time: 0.7
+      # 向前投影的线性距离。
+      linear_granularity: 0.5
+      # 到投影的角距离。
       angular_granularity: 0.025
+      # 对已发布的转换进行过期的时间，以表明此转换在未来仍然有效。
       transform_tolerance: 0.2
+      # 满足目标完成标准的容差 (m)。
       xy_goal_tolerance: 0.25
+      # 低于公差的速度被认为在满足 (rad/s) 时停止。
       trans_stopped_velocity: 0.25
+      # 找到最佳分数后停止评估分数。
       short_circuit_trajectory_evaluation: True
       stateful: True
       critics: ["RotateToGoal", "Oscillation", "BaseObstacle", "GoalAlign", "PathAlign", "PathDist", "GoalDist"]
@@ -147,7 +160,9 @@ controller_server:
       PathDist.scale: 32.0
       GoalDist.scale: 24.0
       RotateToGoal.scale: 32.0
+      # 通过旋转到目标来减缓机器人运动的因素。
       RotateToGoal.slowing_factor: 5.0
+      # If > 0, amount of time to look forward for a collision for..
       RotateToGoal.lookahead_time: -1.0
 
 controller_server_rclcpp_node:
@@ -165,12 +180,13 @@ local_costmap:
       rolling_window: true
       width: 3
       height: 3
-      resolution: 0.05
-      robot_radius: 0.22
+      resolution: 0.05  # 地图分辨率
+      # robot_radius: 0.22
+      footprint: "[[-0.61, -0.4], [-0.61, 0.4], [0.61, 0.4], [0.61, -0.4]]"
       plugins: ["voxel_layer", "inflation_layer"]
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 3.0
+        cost_scaling_factor: 3.0  # 代价比例因子，值越大，代价值越小
         inflation_radius: 0.55
       voxel_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"
@@ -201,15 +217,24 @@ local_costmap:
 global_costmap:
   global_costmap:
     ros__parameters:
-      update_frequency: 1.0
-      publish_frequency: 1.0
+      update_frequency: 1.0   # 地图更新频率
+      publish_frequency: 1.0  # 地图发布频率
       global_frame: map
       robot_base_frame: base_link
       use_sim_time: True
-      robot_radius: 0.22
-      resolution: 0.05
+      robot_radius: 0.62
+      resolution: 0.05  # 地图分辨率
       track_unknown_space: true
       plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
+
+      # filters: ["speed_filter"]
+      # speed_filter:
+      #   plugin: "nav2_costmap_2d::SpeedFilter"
+      #   enabled: False
+      #   filter_info_topic: "/costmap_filter_info"
+      #   speed_limit_topic: "/speed_limit"
+      #   transform_tolerance: 0.1
+
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: True
@@ -217,8 +242,8 @@ global_costmap:
         scan:
           topic: /scan
           max_obstacle_height: 2.0
-          clearing: True
-          marking: True
+          clearing: False   # 是否使用雷达数据清除障碍物
+          marking: False    # 是否使用雷达数据标记障碍物
           data_type: "LaserScan"
       static_layer:
         plugin: "nav2_costmap_2d::StaticLayer"
@@ -238,7 +263,7 @@ global_costmap:
 map_server:
   ros__parameters:
     use_sim_time: True
-    yaml_filename: "turtlebot3_world.yaml"
+    yaml_filename: "map_yaml_file.yaml"
 
 map_saver:
   ros__parameters:
@@ -256,8 +281,8 @@ planner_server:
     GridBased:
       plugin: "nav2_navfn_planner/NavfnPlanner"
       tolerance: 0.5
-      use_astar: false
-      allow_unknown: true
+      use_astar: True
+      allow_unknown: True
 
 planner_server_rclcpp_node:
   ros__parameters:

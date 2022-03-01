@@ -107,8 +107,8 @@ controller_server:
       plugin: "nav2_controller::SimpleGoalChecker"
       
       # 目标公差
-      xy_goal_tolerance: 0.05   # 距离上，和目标相差0.25（m）就达标了
-      yaw_goal_tolerance: 0.05  # 角度上，和目标相差0.25（弧度）就达标了
+      xy_goal_tolerance: 0.05   # 距离上，和目标相差0.05（m）就达标了
+      yaw_goal_tolerance: 0.25  # 角度上，和目标相差0.25（弧度）就达标了
 
       stateful: True
     # DWB parameters
@@ -281,7 +281,7 @@ planner_server:
     GridBased:
       plugin: "nav2_navfn_planner/NavfnPlanner"
       tolerance: 0.5
-      use_astar: True
+      use_astar: False
       allow_unknown: True
 
 planner_server_rclcpp_node:

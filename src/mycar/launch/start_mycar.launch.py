@@ -16,12 +16,12 @@ def generate_launch_description():
     pkg_share = FindPackageShare(package=package_name).find(package_name) 
 
 
-    # urdf_name = "mycar.urdf"
-    # test_urdf_name = "test.urdf"
-    xacro_name = "mycar.xacro"
-    robot_name_in_model = 'mycar'
+    xacro_name = "newcar.xacro"
+    robot_name_in_model = "fishbot"
+    # xacro_name = "mycar.xacro"
+    # robot_name_in_model = 'mycar'
 
-    world_file_path = 'worlds/box_house.world'
+    world_file_path = 'worlds/big_house.world'
     # world_file_path = 'worlds/empty.world'
 
     map_file_path = 'maps/my_map.yaml'
@@ -207,8 +207,12 @@ def generate_launch_description():
         # 将-file 换成-topic，因为 robot_description这个topic已经发布了
         arguments=[
             '-entity', robot_name_in_model,  
-            # '-file', test_urdf_name_path 
-            '-topic',  'robot_description'
+            # '-file', test_urdf_name_path, 
+            '-topic',  'robot_description',
+            '-x', '0.0',
+            '-y', '0.0',
+            '-z', '0.0',
+            '-Y', '0.0',
             ], 
             output='screen'
     )

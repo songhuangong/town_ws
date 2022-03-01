@@ -8,6 +8,8 @@
     <!-- 小车地盘相关参数 -->
     <xacro:property name="base_length" value="1.21" />
     <xacro:property name="base_width" value="0.738" />
+    
+    
     <xacro:property name="base_depth" value="0.35" />
     <xacro:property name="base_up" value="0.028" /> <!-- 小车地盘离地距离 -->
     <xacro:property name="base_center_up" value="${base_depth/2 + base_up}" /> <!-- 小车中心点离地距离 -->
